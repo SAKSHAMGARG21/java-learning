@@ -1,4 +1,4 @@
-package PWSKILLS.Arrays;
+package PWSKILLS.t4Arrays;
 // package PWSKILLS.Arrays;
 
 import java.util.Scanner;

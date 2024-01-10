@@ -1,3 +1,4 @@
+package PWSKILLS.t4Arrays;
 // package PWSKILLS.Arrays;
 
 // import java.util.Scanner;
@@ -46,6 +47,7 @@ public class declaritionOf1darr {
         }
 
         for (int i = 0; i < 5; i++) {
+            
             System.out.println(nums[i]);
         }
     }

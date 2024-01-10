@@ -1,4 +1,4 @@
-package PWSKILLS.Arrays;
+package PWSKILLS.t4Arrays;
 
 // import java.util.Scanner;
 
@@ -41,5 +41,4 @@ public class AnonomusArr {
         int arr[]=new int[5];
         arr=new int[6];
     }
-
 }

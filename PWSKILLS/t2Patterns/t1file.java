@@ -1,3 +1,4 @@
+package PWSKILLS.t2Patterns;
 // package Patterns;
 // import java.util.Scanner;
 // public class t1file {

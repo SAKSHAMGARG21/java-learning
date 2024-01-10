@@ -1,3 +1,4 @@
+package PWSKILLS.t6oops;
 
 import java.util.Scanner;
 
