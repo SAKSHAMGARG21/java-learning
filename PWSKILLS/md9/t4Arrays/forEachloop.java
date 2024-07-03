@@ -1,6 +1,3 @@
-package PWSKILLS.t4Arrays;
-
-
 // import java.util.Scanner;
 
 // public class forEachloop {

@@ -1,4 +1,4 @@
-package PWSKILLS.t4Arrays;
+package PWSKILLS.md9.t4Arrays;
 
 // import java.util.Scanner;
 
@@ -32,7 +32,6 @@ package PWSKILLS.t4Arrays;
 //             System.out.println(ans);
 //         }
 //     }
-
 // }
 
 // import java.util.Scanner;

@@ -1,6 +1,3 @@
-package PWSKILLS.t4Arrays;
-// package PWSKILLS.Arrays;
-
 // import java.util.Scanner;
 
 // public class declaritionOf1darr {
@@ -27,7 +24,6 @@ package PWSKILLS.t4Arrays;
 //         //     System.out.println(nums[index]);
 //         // }
 //     }
-
 // }
 
 
@@ -46,9 +42,9 @@ public class declaritionOf1darr {
             nums[i]=sc.nextInt();
         }
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < n; i++) {
             
-            System.out.println(nums[i]);
+            System.out.print(nums[i] + " ");
         }
     }
 }

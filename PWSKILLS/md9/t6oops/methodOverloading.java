@@ -1,4 +1,3 @@
-package PWSKILLS.t6oops;
 // package PWSKILLS.oops;
 
 // import java.util.Scanner;
@@ -60,14 +59,10 @@ package PWSKILLS.t6oops;
 // public class methodOverloading {
 //     public static void main(String[] args) {
 //         Scanner n = new Scanner(System.in);
-
 //         test obj=new test();
-
 //         obj.show('P');
 //         obj.show(2);
 //         byte b= 3;
 //         obj.show(b);
-
 //     }
-
 // }

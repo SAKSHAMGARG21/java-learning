@@ -1,3 +1,4 @@
+package PWSKILLS.md9.t3Patterns;
 import java.util.Scanner;
 
 public class t1file {
@@ -75,6 +76,5 @@ public class t1file {
             }
             System.out.println();
         }
-
     }
 }

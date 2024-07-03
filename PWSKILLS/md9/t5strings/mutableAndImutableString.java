@@ -1,28 +1,28 @@
-package PWSKILLS.t5strings;
-// package PWSKILLS.strings;
+import java.util.Scanner;
 
 public class mutableAndImutableString {
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
 
-        // String brand="pwskills "; // this is imutable string which cannot be changed
-        // System.out.println(brand);
-        // brand.concat("college walha");
-        // System.out.println(brand);
+        String brand="pwskills "; // this is imutable string which cannot be changed
+        System.out.println(brand);
+        brand.concat("college walha");
+        System.out.println(brand);
 
-        // StringBuilder brand1=new StringBuilder("pwskills"); // this is mutable string
+        StringBuilder brand1=new StringBuilder("pwskills"); // this is mutable string
         // which can be changed
-        // System.out.println(brand);
-        // brand1.append("college walha");
-        // System.out.println(brand1);
+        System.out.println(brand);
+        brand1.append("college walha");
+        System.out.println(brand1);
+        System.out.println();
 
         // Imutable and memory map
         // String s1="pw"; // this objects are take place in "string control pool(scp)
-        // in this pool duplicate are not allowed."
+        // // in this pool duplicate are not allowed."
         // String s2="pw";
         // String s3=new String("pw"); // this will take heap memory storage In which
-        // duplicate values will take place
+        // // duplicate values will take place
         // String s4=new String("pw");
         // System.out.println(s1==s2);
         // System.out.println(s3==s4);
@@ -110,7 +110,7 @@ public class mutableAndImutableString {
         // System.out.println(sb.length());
 
         // StringBuffer sb=new StringBuffer("saksham"); // this will add this string in
-        // initial 16+7;
+        // // initial 16+7;0
         // System.out.println(sb.capacity());
         // System.out.println(sb.charAt(1));
         // sb.setCharAt(1, 'A');

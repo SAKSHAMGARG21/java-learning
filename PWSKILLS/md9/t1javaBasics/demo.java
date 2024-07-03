@@ -1,5 +1,5 @@
-public class Basics{
-	public static void main(String []args){
+class demo {
+	public static void main(String[] args) {
 		System.out.println("hello world");
 		System.out.println(args[0]);
 		System.out.println(args[1]);
@@ -11,4 +11,3 @@ public class Basics{
 // static public void main(String []args)
 // public static void main(String... args)
 // public static void main(String args[])
-

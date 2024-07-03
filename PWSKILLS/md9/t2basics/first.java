@@ -1,5 +1,7 @@
-package PWSKILLS.t3basics;
+// package PWSKILLS.md9.t2basi
+
 // public class first{
+
 //     public static void main(String[] args){
 //         System.out.println("hello world");
 //         System.out.println("hello world 1");
@@ -34,23 +36,21 @@ package PWSKILLS.t3basics;
 //     }
 // }
 
-// package input;
-// import java.util.*;
+import java.util.*;
 import java.util.Scanner; // Import the Scanner class
 
 public class first {
     public static void main(String[] args) {
-        
-        Scanner input = new Scanner(System.in); // Create a Scanner object
-        System.out.print("Enter your name: "); // Prompt the user for input
-        String name = input.nextLine(); // Read user input as a String
-        System.out.println("Hello, " + name + "!"); // Output user input
 
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter your name: "); // Prompt the user for input
+            String name = input.nextLine(); // Read user input as a String
+            System.out.println("Hello, " + name + "!"); // Output user input
+        }
         try (Scanner inpt = new Scanner(System.in)) {
             System.out.print("Enter the no:");
             int a = inpt.nextInt();
-            System.out.println("the value of a is "+a);
+            System.out.println("the value of a is " + a);
         }
-
-    } 
+    }
 }
