@@ -1,10 +1,8 @@
-package PWSKILLS.md9.t4Arrays;
-
+package t4Arrays;
 // import java.util.Scanner;
 
-
 // class calc{
-    
+
 //     public int add(int arr[]){
 //         int res=0;
 //         for (int i : arr) {
@@ -37,7 +35,7 @@ package PWSKILLS.md9.t4Arrays;
 // import java.util.Scanner;
 public class AnonomusArr {
     public static void main(String[] args) {
-        int arr[]=new int[5];
-        arr=new int[6];
+        int arr[] = new int[5];
+        arr = new int[6];
     }
 }

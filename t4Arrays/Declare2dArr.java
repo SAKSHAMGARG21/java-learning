@@ -1,3 +1,5 @@
+package t4Arrays;
+
 import java.util.Scanner;
 
 public class Declare2dArr {
@@ -50,7 +52,6 @@ public class Declare2dArr {
             for (int j = 0; j < colm[i]; j++) {
                 System.out.print(nums[i][j] + " ");
             }
-            System.out.println();
             System.out.println();
         }
 

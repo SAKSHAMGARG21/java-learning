@@ -1,10 +1,10 @@
 // import java.util.Scanner;
 
 // public class declaritionOf1darr {
+
 //     public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);
 //         // int n = sc.nextInt();
-        
 
 //         // statically allocate array In stack
 //         // int nums[]={1,2,3,4,5};
@@ -26,7 +26,6 @@
 //     }
 // }
 
-
 // this is how we take input form user
 import java.util.Scanner;
 
@@ -37,15 +36,14 @@ public class declaritionOf1darr {
         // System.out.print("Enter the size of array:");
         int n = sc.nextInt();
 
-        int nums[]=new int[n];
+        int nums[] = new int[n];
         for (int i = 0; i < n; i++) {
-            nums[i]=sc.nextInt();
+            nums[i] = sc.nextInt();
         }
 
         for (int i = 0; i < n; i++) {
-            
+
             System.out.print(nums[i] + " ");
         }
     }
 }
-
