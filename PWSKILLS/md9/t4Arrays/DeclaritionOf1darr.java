@@ -1,4 +1,4 @@
-package t4Arrays;
+// package t4Arrays;
 
 // import java.util.Scanner;
 // public class declaritionOf1darr {
@@ -26,22 +26,22 @@ package t4Arrays;
 // import java.util.Scanner;
 import java.util.Scanner;
 
-public class declaritionOf1darr {
+public class DeclaritionOf1darr {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            // System.out.print("Enter the size of array:");
+            int n = sc.nextInt();
 
-        // System.out.print("Enter the size of array:");
-        int n = sc.nextInt();
+            int nums[] = new int[n];
+            for (int i = 0; i < n; i++) {
+                nums[i] = sc.nextInt();
+            }
 
-        int nums[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            nums[i] = sc.nextInt();
-        }
+            for (int i = 0; i < n; i++) {
 
-        for (int i = 0; i < n; i++) {
-
-            System.out.print(nums[i] + " ");
+                System.out.print(nums[i] + " ");
+            }
         }
     }
 }

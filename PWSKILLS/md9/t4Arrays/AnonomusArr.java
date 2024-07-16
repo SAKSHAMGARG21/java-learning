@@ -1,4 +1,4 @@
-package t4Arrays;
+// package t4Arrays;
 // import java.util.Scanner;
 
 // class calc{

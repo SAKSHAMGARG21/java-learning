@@ -1,5 +1,6 @@
-package t4Arrays;
+// package t4Arrays;
 
+// import java.lang.*;
 import java.util.Scanner;
 
 public class forEachloop {

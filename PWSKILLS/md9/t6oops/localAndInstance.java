@@ -1,3 +1,5 @@
+package PWSKILLS.md9.t6oops;
+
 
 import java.util.Scanner;
 
