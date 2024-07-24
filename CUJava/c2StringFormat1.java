@@ -1,4 +1,4 @@
-public class StringFormat1 {
+public class c2StringFormat1 {
 
     public static boolean isPalindrome(String input) {
 
