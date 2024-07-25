@@ -63,29 +63,39 @@ public class c3Arrays {
 
         // System.out.println(Arrays.toString(temp));
 
-        int x = arr[0];
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (count == 0) {
-                x = arr[i];
-                count = 1;
-            } else if (x == arr[i]) {
-                count++;
-            } else {
-                count--;
-            }
-        }
+        // int x = arr[0];
+        // int count = 0;
+        // for (int i = 0; i < arr.length; i++) {
+        // if (count == 0) {
+        // x = arr[i];
+        // count = 1;
+        // } else if (x == arr[i]) {
+        // count++;
+        // } else {
+        // count--;
+        // }
+        // }
 
-        int freq = 0;
-        for (int i : arr) {
-            if (i == x)
-                freq++;
-        }
+        // int freq = 0;
+        // for (int i : arr) {
+        // if (i == x)
+        // freq++;
+        // }
 
-        if (freq >= n / 2)
-            System.out.println(x);
-        else
-            System.out.println(-1);
+        // if (freq >= n / 2)
+        // System.out.println(x);
+        // else
+        // System.out.println(-1);
+
+        // int mxsum = Integer.MIN_VALUE;
+        // for (int i = 0; i < arr.length; i++) {
+        // int sum = arr[i];
+        // for (int j = i + 1; j < arr.length; j++) {
+        // sum += arr[j];
+        // mxsum = Math.max(mxsum, sum);
+        // }
+        // }
+        // System.out.println(mxsum);
 
     }
 }
