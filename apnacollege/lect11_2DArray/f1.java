@@ -68,8 +68,17 @@ public class f1 {
             }
         }
 
-        print2dArr(arr);
+        // print2dArr(arr);
 
-        
+        int x=sc.nextInt();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == x){
+                    System.out.print(i+" "+j);
+                    break;
+                }
+            }
+        }
     }
 }
