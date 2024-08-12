@@ -13,11 +13,11 @@ public class c3Arrays {
         }
 
         // for (int i = 0; i < arr.length; i++) {
-        // System.out.print(arr[i]+" ");
+        //     System.out.print(arr[i] + " ");
         // }
         // System.out.println();
         // for (int i : arr) {
-        // System.out.print(i+" ");
+        //     System.out.print(i + " ");
         // }
         // System.out.println();
         // System.out.println(Arrays.toString(arr));
@@ -87,15 +87,15 @@ public class c3Arrays {
         // else
         // System.out.println(-1);
 
-        int mxsum = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length; i++) {
-            int sum = arr[i];
-            for (int j = i + 1; j < arr.length; j++) {
-                sum += arr[j];
-                mxsum = Math.max(mxsum, sum);
-            }
-        }
-        System.out.println(mxsum);
+        // int mxsum = Integer.MIN_VALUE;
+        // for (int i = 0; i < arr.length; i++) {
+        // int sum = arr[i];
+        // for (int j = i + 1; j < arr.length; j++) {
+        // sum += arr[j];
+        // mxsum = Math.max(mxsum, sum);
+        // }
+        // }
+        // System.out.println(mxsum);
 
     }
 }

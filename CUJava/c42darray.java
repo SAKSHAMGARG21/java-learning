@@ -5,13 +5,13 @@ import java.util.Collection;
 public class c42darray {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        // ArrayList<Integer> arr = new ArrayList<Integer>();
-        // System.out.println(arr);
-        // arr.add(10);
-        // arr.add(20);
-        // arr.add(40);
-        // arr.add(30);
-        // arr.add(60);
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        System.out.println(arr);
+        arr.add(10);
+        arr.add(20);
+        arr.add(40);
+        arr.add(30);
+        arr.add(60);
         // System.out.println(arr);
         // arr.add(1, 34);
         // System.out.println(arr);
@@ -20,9 +20,9 @@ public class c42darray {
         // arr.remove(Integer.valueOf(42));
         // System.out.println(arr);
 
-        // for (int i = 0; i < args.length; i++) {
-        //     System.out.println(arr.get(i) + " ");
-        // }
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(arr.get(i) + " ");
+        }
 
         // System.out.println();
         // arr.set(1, 72);
@@ -40,8 +40,10 @@ public class c42darray {
         for (int i = 0; i < n; i++) {
             a.add(sc.nextInt());
         }
+        System.out.println(a.size());
 
         Collections.sort(a);
         System.out.println(a);
     }
 }
+
