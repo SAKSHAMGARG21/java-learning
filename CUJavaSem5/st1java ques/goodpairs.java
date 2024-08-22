@@ -1,8 +1,7 @@
-public class f1l16 {
+public class goodpairs {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        
     }
 
 }
