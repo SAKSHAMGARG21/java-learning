@@ -179,23 +179,31 @@ public class f1 {
         // System.out.println();
         // }
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < 2 * i - 1; j++) {
-                System.out.print("*");
+        // for (int i = 1; i <= n; i++) {
+        // for (int j = 1; j <= n - i; j++) {
+        // System.out.print(" ");
+        // }
+        // for (int j = 0; j < 2 * i - 1; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+        // for (int i = n; i >= 1; i--) {
+        // for (int j = 1; j <= n - i; j++) {
+        // System.out.print(" ");
+        // }
+        // for (int j = 0; j < 2 * i - 1; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+
+        for (int i = 0; i < n; i++) {
+            char ch = (char)('A' + n-1);
+            for (int j = 0; j < n; j++) {
+                System.out.print((char)(ch-j)+" ");
             }
             System.out.println();
-        }
-        for (int i = n; i >= 1; i--) {
-            for (int j = 1; j <= n - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j < 2 * i - 1; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        }                           
     }
 }

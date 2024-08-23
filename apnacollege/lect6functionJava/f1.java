@@ -28,6 +28,15 @@ public class f1 {
         }
         System.out.println("Factorial of " + n + " is " + fact);
     }
+    public static void  reversearr(int[] arr1){
+
+        for (int i = 0; i <=arr1.length/2; i++) {
+            int temp=arr1[i];
+            arr1[i]=arr1[arr1.length-1-i];
+            arr1[arr1.length-1-i]=temp;
+        }
+
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // int a = 10, b = 20;
@@ -48,14 +57,24 @@ public class f1 {
         // System.out.println(sum);
         // stringprint(str);
 
-        int a=sc.nextInt();
-        int b=sc.nextInt();
+        // int a=sc.nextInt();
+        // int b=sc.nextInt();
 
-        int sum=printsum(a,b);
-        System.out.println("Sum of a and b : " + sum);
-        int prod=printprod(a, b);
-        System.out.println("Product is "+prod);
-        printfact(a);
-        
+        // int sum=printsum(a,b);
+        // System.out.println("Sum of a and b : " + sum);
+        // int prod=printprod(a, b);
+        // System.out.println("Product is "+prod);
+        // printfact(a);
+
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=sc.nextInt();
+        }
+
+        reversearr(arr);
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
     }    
 }

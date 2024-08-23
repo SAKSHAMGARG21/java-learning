@@ -11,39 +11,49 @@ public class first {
 
         System.out.println("Enter a number: ");
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int year = sc.nextInt();
 
-        // if ((n&1)==0){
+        // if ((n & 1) == 0) {
         // System.out.println("Even");
-        // }
-        // else{
+        // } else {
         // System.out.println("odd");
         // }
 
-        // if ((n%4==0 || n%400==0) && (n%100!=0)){
+        // if ((n % 4 == 0 ) && (n % 400 == 0) || (n % 100 != 0)) {
         // System.out.println("Leep Year");
-        // }
-        // else{
+        // } else {
         // System.out.println("Not Leep Year");
         // }
 
-        boolean isprime = true;
-        if (n <= 1) {
-            isprime = false;
-        } else if (n == 1) {
-            isprime = false;
-        } else {
-            for (int i = 2; i * i < n; i++) {
-                if (n % i == 0) {
-                    isprime = false;
-                    break;
-                }
+        if (year % 4 == 0) {
+            if (year % 100 != 0 || year % 400 == 0) {
+                System.out.println("Its a leap Year ");
+            } else {
+                System.out.println("Not a leap year");
             }
+        } else {
+            System.out.println("Not a leap year");
         }
-        if(isprime){
-            System.out.println("n is prime");
-        }else{
-            System.out.println("n is not prime");
-        }
+
+        // boolean isprime = true;
+        // if (n <= 1) {
+        // isprime = false;
+        // } else if (n == 1) {
+        // isprime = false;
+        // } else {
+        // for (int i = 2; i * i < n; i++) {
+        // if (n % i == 0) {
+        // isprime = false;
+        // break;
+        // }
+        // }
+        // }
+        // if(isprime){
+        // System.out.println("n is prime");
+        // }else{
+        // System.out.println("n is not prime");
+        // }
+
+        
     }
 }
