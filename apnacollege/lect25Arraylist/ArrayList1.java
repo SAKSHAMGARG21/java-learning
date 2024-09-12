@@ -46,5 +46,7 @@ public class ArrayList1 {
         // Sort the list in ascending order using the Collections.sort() method
         Collections.sort(arr);
         System.out.println(arr);
+        Collections.reverse(arr);
+        System.out.println(arr);
     }
 }

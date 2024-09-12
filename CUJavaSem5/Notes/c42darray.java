@@ -20,7 +20,7 @@ public class c42darray {
         // arr.remove(Integer.valueOf(42));
         // System.out.println(arr);
 
-        for (int i = 0; i < args.length; i++) {
+        for (int i = 0; i < arr.size(); i++) {
             System.out.println(arr.get(i) + " ");
         }
 

@@ -58,19 +58,21 @@ public class c2StringFormat1 {
     }
 
     public static void main(String[] args) {
-        // String str1="hello";
-        // String str2="hello";
-        // String str1=new String("hello");
-        // String str2=new String("hello");
-        // if (str1==str2){
-        // System.out.println("same");
-        // }
-        // else{
-        // System.out.println("not Same");
+        // String str1 = "hello";
+        // String str2 = "hello";
+        // String str1 = new String("hello");
+        // String str2 = new String("hello");
+        // if (str1 == str2) {
+        //     System.out.println("same");
+        // } else {
+        //     System.out.println("not Same");
         // }
 
         // String word = "radar";
 
+        // char[] carr=word.toCharArray();
+
+        // System.out.println(carr.toString());
         // boolean result = isPalindrome(word);
 
         // System.out.println(result); // Output: true
@@ -90,6 +92,11 @@ public class c2StringFormat1 {
         // String word = "hello World";
 
         // String result = reverse(word);
+
+        // String s1="Neeraj";
+        // System.out.println(s1.toLowerCase());
+        // String s1="Neeraj";
+        // System.out.println(s1.toUpperCase());    
 
         // System.out.println(result); // Output: true
 
@@ -126,6 +133,8 @@ public class c2StringFormat1 {
         // System.out.println(ar ^ ar1);
 
         // n&x!=0;
+
+
 
     }
 }

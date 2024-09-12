@@ -18,18 +18,18 @@ public class TwoOddEle {
         // }
         // }
 
-        // Map<Integer,Integer> mp=new HashMap<>();
+        // Map<Integer, Integer> mp = new HashMap<>();
 
         // for (int i = 0; i < arr.length; i++) {
-        // mp.add(arr[i]);
+        //     mp.put(arr[i], mp.getOrDefault(arr[i], 0) + 1);
         // }
 
-        String s=sc.nextLine();
-        // char[] num=s.toCharArray();
+        // for (Map.Entry<Integer, Integer> enty : mp.entrySet()) {
+        //     // System.out.println(enty.getKey() +" " +enty.getValue());
 
-        // String s="1234";
-        int rs = Integer.parseInt(s);
-        System.out.println(rs);
-
+        //     if ((enty.getValue() & 1) == 1) {
+        //         System.out.println(enty.getKey() + " ");
+        //     }
+        // }
     }
 }

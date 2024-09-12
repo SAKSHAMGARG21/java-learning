@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class first {
+public class c1first {
     public static void main(String[] args) {
         // System.out.println("hello");
         // for (int i = 0; i < args.length; i++) {

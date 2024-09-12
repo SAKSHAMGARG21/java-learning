@@ -49,13 +49,47 @@ public class f1 {
         // System.out.println(st.substring(4, 7));
 
         String st = "23";
-
+        StringBuilder t = new StringBuilder();
         for (int i = 0; i < 2; i++) {
             char ch = st.charAt(i);
             int val = ch - '0';
-            System.out.print(val);
+            t.append(val);
         }
 
+        System.out.println(t);
+
+        // String str = "123";
+        // int num = Integer.parseInt(str);
+
+        // String str = "123";
+        // Integer num = Integer.valueOf(str);
+
+        // int num = 123;
+        // String str = String.valueOf(num);
+
+        // int num = 123;
+        // String str = Integer.toString(num);
+
+        // int num = 123;
+        // String str = String.format("%d", num);
+
+        // float f = 12.34f;
+        // String str = String.valueOf(f);
+        // System.out.println(str); // Output: 12.34
+
+        // or
+
+        float f = 12.34f;
+        String str = Float.toString(f);
+        System.out.println(str); // Output: 12.34
+
+        // float f = 12.34f;
+        // String str = String.format("%.2f", f);
+        // System.out.println(str); // Output: 12.34
+
+        // char[] charArray = { 'H', 'e', 'l', 'l', 'o' };
+        // String str = new String(charArray);
+        // System.out.println(str); // Output: Hello
         // strings are Immutable in java
     }
 }

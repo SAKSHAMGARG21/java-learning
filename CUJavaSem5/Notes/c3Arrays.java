@@ -49,7 +49,7 @@ public class c3Arrays {
             if (((e1 & 1) == 0) && ((e2 & 1) == 1)) {
                 i++;
                 j--;
-            } else if (((e1 & 1) == 0) && ((e2 & 1) == 0)) {
+            } else if (((e1 & 1) != 0) && ((e2 & 1) == 0)) {
                 swap(arr, i, j);
                 i++;
             } else {
@@ -66,8 +66,8 @@ public class c3Arrays {
 
         // System.out.println("After swap: " + java.util.Arrays.toString(digits));
 
-        // Arrays.sort(arr, 0, i);
-        // Arrays.sort(arr, i, n);
+        Arrays.sort(arr, 0, i);
+        Arrays.sort(arr, i, n);
 
         System.out.println(Arrays.toString(arr));
 

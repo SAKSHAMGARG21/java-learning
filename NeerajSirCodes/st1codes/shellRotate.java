@@ -49,7 +49,7 @@ public class shellRotate {
         }
     }
 
-    static void rotate(int[][] arr, int s, int r) {
+    public static void rotate(int[][] arr, int s, int r) {
         int[] oned = storeinoned(arr, s);
         oned = rotation(oned, r);
         storein2d(oned, arr, s);

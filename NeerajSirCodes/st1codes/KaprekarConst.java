@@ -12,8 +12,8 @@ public class KaprekarConst {
     }
     private static int kap(int n) { 
         String numStr = String.format("%04d", n); 
-        String incStr = sortStr(numStr, false); 
-        String decStr = sortStr(numStr, true); 
+        String decStr = sortStr(numStr, false); 
+        String incStr = sortStr(numStr, true); 
 
         int incNum = Integer.parseInt(incStr); 
         int decNum = Integer.parseInt(decStr); 
@@ -23,7 +23,7 @@ public class KaprekarConst {
     static String sortStr(String numStr, boolean asc) {
         char[] arr = numStr.toCharArray();
         Arrays.sort(arr);
-        if (asc) {
+        if (!asc) {
             reverseArr(arr);
         }
         return new String(arr);

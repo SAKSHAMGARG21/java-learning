@@ -1,19 +1,18 @@
-// package PWSKILLS.t7encapsulation in java;
 
-// public class staticFunction {
+public class staticFunction {
 
-//     static int a;
-//     static{
-//         System.out.println("static function");
-//         int a=10;
-//         System.out.println(a);
-//     }
-//     public static void main(String[] args) {
-//         // Scanner sc = new Scanner(System.
-//         System.out.println("main method");
-//     }
+    static int a;
+    static{
+        System.out.println("static function");
+        int a=10;
+        System.out.println(a);
+    }
+    public static void main(String[] args) {
+        // Scanner sc = new Scanner(System.
+        System.out.println("main method");
+    }
 
-// }
+}
 
 
 
