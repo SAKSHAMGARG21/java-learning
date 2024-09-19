@@ -2,7 +2,6 @@ import java.util.*;
 
 interface sort {
     void Merge(int a[], int b[]);
-
     void sort_array();
 }
 
