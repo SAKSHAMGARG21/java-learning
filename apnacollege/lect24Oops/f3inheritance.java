@@ -1,6 +1,6 @@
 // Inheritance  
 
-// intro
+// intro 
 // import java.util.*;
 // class shape{
 //     String color;
@@ -128,7 +128,7 @@ class Triangle extends shape {
 
 class Circle extends shape {
     public void area(int r) {
-        System.out.println(3.14*r*r);
+        System.out.printf("%.2f",3.14*r*r);
     }
 }
 
@@ -144,8 +144,6 @@ public class f3inheritance {
         // int n = sc.nextInt();
         Triangle obj1 = new Triangle();
         obj1.area(2, 3);
-        Equilatrealtriangle obj2 = new Equilatrealtriangle();
-        obj2.area(3, 4);
         Circle obj3=new Circle();
         obj3.area(3);
         Square obj4=new Square();

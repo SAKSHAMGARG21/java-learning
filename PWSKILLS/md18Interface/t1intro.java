@@ -17,13 +17,14 @@ interface x {
 
 class B implements A, x {
     public void show() {
-        // System.out.println("this is B class ");
+        System.out.println("this is B class ");
     }
 
     public void abc() {
-        // System.out.println("this is abc");
+        System.out.println("this is abc");
     }
 }
+
 
 public class t1intro {
     public static void main(String[] args) {

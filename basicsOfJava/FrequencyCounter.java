@@ -44,7 +44,7 @@
 //                     entry.getValue());
 //         }
 //     }
-// }
+// } 
 
 // import java.util.HashMap;
 // import java.util.Map;
@@ -90,18 +90,22 @@ public class FrequencyCounter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // int n = sc.nextInt();
-        int[] arr = { 1, 3, 2, 2, 3, 3, 4, 5, 4, 4, 4 };
+        int n = sc.nextInt();
+        int [] arr ={2,4,6,64,4,7,6,4,3,56,74,};
 
-        Map<Integer, Integer> mp = new HashMap<>();
-        for (int i : arr) {
-            if (mp.containsKey(i))
-                mp.put(i, mp.get(i) + 1);
-            else
-                mp.put(i, 1);
+        Map<Integer,Integer> mp=new HashMap<>();
+
+        for (int num:arr){
+            if (mp.containsKey(num)){
+                mp.put(num, mp.get(num)+1);
+            }else{
+                mp.put(num,1);
+            }
         }
-        for (Map.Entry<Integer, Integer> i : mp.entrySet()) {
-            System.out.println(i.getKey() + " " + i.getValue());
+
+        for (Map.Entry<Integer,Integer>  entry :mp.entrySet()){
+            System.out.println("Element: "+entry.getKey()+" ,Frequency: "+entry.getValue());
         }
+
     }
 }

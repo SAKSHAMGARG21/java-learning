@@ -7,7 +7,7 @@
 // Data Hinding  : It is a mechanism to hide the suspecius data from the outside world.
 
 
-import Bank;
+// package Back;
 
 class Account {
     public String name;
@@ -36,6 +36,5 @@ public class bank {
 
         u1.setpass(2134);
         System.out.println(u1.getpass());
-
     }
 }

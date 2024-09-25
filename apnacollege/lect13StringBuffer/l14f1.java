@@ -12,10 +12,10 @@ public class l14f1 {
         // sb.insert(3, "n");
         // System.out.println(sb);
 
-        // sb.delete(2, 3);
-        // System.out.println(sb);
-        // sb.delete(2, 4);
-        // System.out.println(sb);
+        sb.delete(2, 3);
+        System.out.println(sb);
+        sb.delete(2, 4);
+        System.out.println(sb);
 
         // StringBuilder sb = new StringBuilder("h");
         // sb.append("e");

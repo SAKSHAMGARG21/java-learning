@@ -51,17 +51,13 @@ public class Strings {
                 numstrs[l++]=st;
             }
         }
-        String[] numstrs2=new String[l];
-        for (int i=0;i<l;i++){
-            numstrs2[i]=numstrs[i];
-        }
         l=0;
         for (String st:strs){
             if (!st.trim().isEmpty()){
                 String revs=revstr(st);
                 sb.append(revs);
             }else{
-                sb.append(numstrs2[l++]);
+                sb.append(numstrs[l++]);
             }
         }
         System.out.println(sb.toString());

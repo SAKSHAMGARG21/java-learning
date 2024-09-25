@@ -13,7 +13,7 @@ import java.util.Scanner;
 //                 System.out.println(Thread.currentThread().getName() + "Came back and park the car");
 //                 Thread.sleep(2000);
 //         } catch (Exception e) {
-//             // TODO: handle exception
+//             TODO: handle exception
 //             System.out.println("Exception  in car thread");
 //         }
 //     }

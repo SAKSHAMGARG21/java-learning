@@ -26,9 +26,11 @@ class developer{
 public class t2tutinterface {
     public static void main(String[] args) {
         computer obj=new desktop();
+        computer obj1=new laptop();
 
         developer dev=new developer();
         dev.buildapp(obj);
+        dev.buildapp(obj1);
 
     }
 }

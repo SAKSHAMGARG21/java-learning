@@ -32,6 +32,6 @@ public class t3innerclass {
         // A.B obj1= obj.new B(); // without static keyword
         A.B obj1= new A.B();
         obj.show();
-        // obj.display();
+        obj1.display();
     } 
 }

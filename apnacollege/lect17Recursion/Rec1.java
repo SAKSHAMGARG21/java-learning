@@ -2,80 +2,84 @@ import java.util.*;
 
 public class Rec1 {
 
-    public static void solve(int n){
-        if (n==0) return ;
-        solve(n-1);
+    public static void solve(int n) {
+        if (n == 0)
+            return;
+        solve(n - 1);
         System.out.println(n);
     }
 
-    public static void printsum(int i,int n,int sum){
-        if (i==n){
-            sum+=i;
+    public static void printsum(int i, int n, int sum) {
+        if (i == n) {
+            sum += i;
             System.out.println(sum);
             return;
-        } 
+        }
 
-        sum+=i;
-        printsum(i+1,n,sum);
+        sum += i;
+        printsum(i + 1, n, sum);
     }
 
-    public static int factorial(int n){
-        if (n==0) return 1;
+    public static int factorial(int n) {
+        if (n == 0)
+            return 1;
 
-        int fact=n*factorial(n-1);
+        int fact = n * factorial(n - 1);
         return fact;
     }
-    public static int sum(int n){
-        if (n==0) return 0;
-        int sm=n+sum(n-1);
+
+    public static int sum(int n) {
+        if (n == 0)
+            return 0;
+        int sm = n + sum(n - 1);
         return sm;
     }
 
-    public static int fibonaci(int n){ 
-        if (n<=0) return 0;
-        if (n==1) return 1;
+    public static int fibonaci(int n) {
+        if (n <= 0)
+            return 0;
+        if (n == 1)
+            return 1;
 
-        return  fibonaci(n-1)+fibonaci(n-2);
+        return fibonaci(n - 1) + fibonaci(n - 2);
     }
 
-    public static void sequence(int a,int b,int n){
-        if ( n==0 ) return ;
+    public static void sequence(int a, int b, int n) {
+        if (n == 0)
+            return;
 
-        int c=a+b;
+        int c = a + b;
         System.out.println(c);
-        sequence(b,c,n-1);
+        sequence(b, c, n - 1);
     }
 
-    public static int calcPow(int x,int n){
+    public static int calcPow(int x, int n) {
 
-        if (n==0){
+        if (n == 0) {
             return 1;
         }
-        if (x==0){
+        if (x == 0) {
             return 0;
         }
 
-        int pow= x*calcPow(x, n-1);
+        int pow = x * calcPow(x, n - 1);
         return pow;
     }
 
-    public static int calcPowlog(int x,int n){
-        if (n==0){
+    public static int calcPowlog(int x, int n) {
+        if (n == 0) {
             return 1;
         }
-        if (x==0){
+        if (x == 0) {
             return 0;
         }
 
-        if (n%2==0){
-            return calcPowlog(x, n/2)*calcPowlog(x, n/2);
-        }else{
-            return calcPowlog(x, n/2)* calcPowlog(x, n/2)*x;
+        if (n % 2 == 0) {
+            return calcPowlog(x, n / 2) * calcPowlog(x, n / 2);
+        } else {
+            return calcPowlog(x, n / 2) * calcPowlog(x, n / 2) * x;
         }
-
-
     }
-
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -98,7 +102,7 @@ public class Rec1 {
         // sequence(a,b,7-2);
 
         // int pow=calcPow(2, 5);
-        int logpow=calcPowlog(2, 5);
+        int logpow = calcPowlog(2, 5);
         System.out.println(logpow);
     }
 }

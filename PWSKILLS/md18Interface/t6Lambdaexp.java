@@ -2,14 +2,13 @@
 // -> to implements a functional interface 
 // -> less coding
 
-@FunctionalInterface // this @ symbol denots anutat
+@FunctionalInterface // this @ symbol denots anutations
 interface Car {
-    void drive(int avg,int avg2); // if there is more than one function in interface then it should not be lambda
-                  // exp
+    void drive(int avg,int avg2); // if there is more than one function in interface then it should not be lambda // exp
     // void show(); // error
 }
 
-// class ElectricCar implements Car{
+// class ElectricCar implements Car{ 
 // public void drive(){
 // System.out.println("Electric Car is driving");
 // }

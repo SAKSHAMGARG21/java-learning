@@ -48,15 +48,15 @@ public class f1 {
         // System.out.println(st.substring(1, 5));
         // System.out.println(st.substring(4, 7));
 
-        String st = "23";
-        StringBuilder t = new StringBuilder();
-        for (int i = 0; i < 2; i++) {
-            char ch = st.charAt(i);
-            int val = ch - '0';
-            t.append(val);
-        }
+        // String st = "23";
+        // StringBuilder t = new StringBuilder();
+        // for (int i = 0; i < 2; i++) {
+        // char ch = st.charAt(i);
+        // int val = ch - '0';
+        // t.append(val);
+        // }
 
-        System.out.println(t);
+        // System.out.println(t);
 
         // String str = "123";
         // int num = Integer.parseInt(str);
@@ -71,7 +71,9 @@ public class f1 {
         // String str = Integer.toString(num);
 
         // int num = 123;
+        // String str = String.format("%04d", num);
         // String str = String.format("%d", num);
+        // System.out.println(str);
 
         // float f = 12.34f;
         // String str = String.valueOf(f);
@@ -79,17 +81,33 @@ public class f1 {
 
         // or
 
-        float f = 12.34f;
-        String str = Float.toString(f);
-        System.out.println(str); // Output: 12.34
+        // float f = 12.34f;
+        // String str = Float.toString(f);
+        // System.out.println(str); // Output: 12.34
+
+        // double d=24.456756;
+        // System.out.format("%.2f",d);
 
         // float f = 12.34f;
         // String str = String.format("%.2f", f);
         // System.out.println(str); // Output: 12.34
 
-        // char[] charArray = { 'H', 'e', 'l', 'l', 'o' };
-        // String str = new String(charArray);
+        char[] charArray = { 'H', 'e', 'l', 'l', 'o' };
+        String st = Arrays.toString(charArray);
+        System.out.println(st);
+        // System.out.println(charArray);
+        String str1 = new String(charArray);
+        System.out.println(str1);
         // System.out.println(str); // Output: Hello
         // strings are Immutable in java
+
+        double d = 24.456756;
+        double r = getfloatval(d);
+        System.out.println(r);
+    }
+
+    public static double getfloatval(double r) {
+        String str = String.format("%.2f", r);
+        return Double.parseDouble(str);
     }
 }

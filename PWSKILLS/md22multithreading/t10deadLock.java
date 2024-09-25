@@ -18,7 +18,7 @@ class lib implements Runnable {
                         System.out.println("std 1 acc the res " + res2);
                         Thread.sleep(2000);
                         synchronized (res3) {
-                            System.out.println("std 2 acct the res " + res3);
+                            System.out.println("std 1 acct the res " + res3);
                             Thread.sleep(2000);
                         }
                     }

@@ -31,11 +31,13 @@
 // }
 
 // 4. Final Parameters: A method parameter declared as final cannot be reassigned within the method.
-public void myMethod(final int x) {
-    x = 20; // compiler error
-}
-public class finalKeyword {
-    public static void main(String[] args) {
+// public void myMethod(final int x) {
+//     x = 20; // compiler error
+// }
+// public class finalKeyword {
+//     public static void main(String[] args) {
 
-    }
-}
+//     }
+// }
+
+

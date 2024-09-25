@@ -10,7 +10,7 @@ public class t9exp {
         // try {
         // num=sc.nextInt();
         // }
-        // finally{ // finally block executes always if execption throw or not
+        // finally{ // finally block executes always allthow execption throw or not
         // sc.close();
         // System.out.println("resource closed");
         // }

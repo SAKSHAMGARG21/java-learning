@@ -24,6 +24,7 @@ public class mutableAndImutableString {
         // String s3=new String("pw"); // this will take heap memory storage In which
         // // duplicate values will take place
         // String s4=new String("pw");
+
         // System.out.println(s1==s2);
         // System.out.println(s3==s4);
 
@@ -128,11 +129,14 @@ public class mutableAndImutableString {
         // System.out.println(sb.reverse());
 
 
-        // Difference b/w stringbuffer and stringBuilder
-
-        // StringBuffer not have synchronization and multithreats concept during version(1.0).
-
-        // StringBuilder have synchronization and multithreats concept during version(1.5).
+        // StringBuffer
+        // Synchronization: StringBuffer is synchronized, meaning it is thread-safe. Multiple threads can access it without causing data inconsistency.
+        // Performance: Due to synchronization, StringBuffer is slower than StringBuilder when used in a single-threaded environment.
+        // Version: StringBuffer has been available since JDK 1.0.
+        // StringBuilder
+        // Synchronization: StringBuilder is not synchronized, meaning it is not thread-safe. It should be used when thread safety is not a concern.
+        // Performance: StringBuilder is faster than StringBuffer because it does not have the overhead of synchronization.
+        // Version: StringBuilder was introduced in JDK 1.5.
     }
 
 }

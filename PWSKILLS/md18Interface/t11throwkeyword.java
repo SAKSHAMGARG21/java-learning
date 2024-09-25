@@ -17,7 +17,7 @@ public class t11throwkeyword {
         try {
             if (b <= 0) {
                 // Exception e = new ArithmeticException("Not a negv no");
-                Exception e = new Myexception("Not a negv no");
+                Exception e = new Myexception("Not a negv no or zero");
                 throw e;
             } else {
                 int res = a / b;
@@ -26,8 +26,7 @@ public class t11throwkeyword {
             }
         } catch (Exception e) {
             System.out.println("error " + e);
-        }
-
+        }    
         
     }
 }

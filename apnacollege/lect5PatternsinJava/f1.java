@@ -198,12 +198,27 @@ public class f1 {
         // System.out.println();
         // }
 
+        // for (int i = 0; i < n; i++) {
+        //     char ch = (char)('A' + n-1);
+        //     for (int j = 0; j < n; j++) {
+        //         System.out.print((char)(ch-j)+" ");
+        //     }
+        //     System.out.println();
+        // }                     
+        
         for (int i = 0; i < n; i++) {
-            char ch = (char)('A' + n-1);
-            for (int j = 0; j < n; j++) {
-                System.out.print((char)(ch-j)+" ");
+            for (int j = 0; j <= i; j++) {
+                if (j==0 || j==i){
+                    if(j==0){
+                        System.out.print("1");
+                    }else{
+                        System.out.print("*1");
+                    }
+                }else{
+                    System.out.print("*"+(i));
+                }
             }
             System.out.println();
-        }                           
+        }
     }
 }
