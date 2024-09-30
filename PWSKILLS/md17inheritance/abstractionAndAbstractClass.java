@@ -54,6 +54,5 @@ public class abstractionAndAbstractClass {
         ref2.takeoff();
         ref2.fly();
         ref2.landing();
-
     }
 }

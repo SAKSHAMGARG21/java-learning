@@ -35,6 +35,5 @@ public class t6iterator {
         while(litr.hasPrevious()){
             System.out.print(litr.previous()+" ");
         }
-
     }
 }

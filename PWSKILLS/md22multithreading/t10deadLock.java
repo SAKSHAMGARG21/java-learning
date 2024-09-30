@@ -9,7 +9,6 @@ class lib implements Runnable {
         String name = Thread.currentThread().getName();
         if (name.equals("St-1")) {
             try {
-
                 Thread.sleep(2000);
                 synchronized (res1) {
                     System.out.println("Std 1 acc the res " + res1);
@@ -23,13 +22,11 @@ class lib implements Runnable {
                         }
                     }
                 }
-
             } catch (Exception e) {
                 System.out.println("Exception  in car thread");
             }
         } else {
             try {
-
                 Thread.sleep(2000);
                 synchronized (res1) {
                     System.out.println("Std 2 acc the res " + res1);

@@ -26,9 +26,13 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("Apple");
-        arrayList.add("Banana");
         arrayList.add("Cherry");
+        arrayList.add("Banana");
 
+        Collections.reverse(arrayList);
+        System.out.println("ArrayList: " + arrayList);
+        Collections.sort(arrayList);
+        System.out.println("ArrayList: " + arrayList);
         System.out.println("ArrayList: " + arrayList);
         System.out.println("Element at index 1: " + arrayList.get(1));
         arrayList.set(1, "Blueberry");

@@ -5,7 +5,6 @@ class exp implements Runnable{
                 System.out.println("Focus is important");
                 Thread.sleep(2000);
             } catch (Exception e) {
-                
                 System.out.println("Thread is interupt");
             }
         }
@@ -19,6 +18,5 @@ public class t11intrupt {
 
         t1.start();
         t1.interrupt();
-
     }
 }

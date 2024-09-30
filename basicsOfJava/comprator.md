@@ -12,7 +12,7 @@ public The `compareTo` method in Java is used to compare two objects to determin
 Here's an example of how `compareTo` works with strings:
 
 ```java
-String str1 = "apple";
+String str1 = "applde";
 String str2 = "banana";
 
 int result = str1.compareTo(str2);

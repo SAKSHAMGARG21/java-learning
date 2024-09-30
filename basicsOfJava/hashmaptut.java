@@ -10,6 +10,11 @@ public class hashmaptut {
         hashMap.put("Banana", 2);
         hashMap.put("Cherry", 3);
 
+        
+        for (HashMap.Entry<String,Integer> entry : hashMap.entrySet()){
+            System.out.println(entry.getKey()+"->"+entry.getValue());
+        }
+
         System.out.println("HashMap: " + hashMap);
 
         // Accessing elements
@@ -24,7 +29,7 @@ public class hashmaptut {
         hashMap.remove("Banana");
         System.out.println("After removing 'Banana': " + hashMap);
         System.out.println("Contains key 'Cherry': " + hashMap.containsKey("Cherry"));
-        System.out.println("Contains value 2: " + hashMap.containsValue(2));
+        System.out.println("Contains value 2 : " + hashMap.containsValue(2));
         System.out.println("Keys: " + hashMap.keySet());
         System.out.println("Values: " + hashMap.values());
         System.out.println("Entries: " + hashMap.entrySet());

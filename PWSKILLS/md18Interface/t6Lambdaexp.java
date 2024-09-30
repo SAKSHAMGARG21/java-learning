@@ -23,14 +23,13 @@ public class t6Lambdaexp {
         // Car obj = () -> {
         // System.out.println("Driving audi car");
         // };
-        // obj.drive();
+        // obj.drive();huikf979h
 
         // Car obj = () -> {
         //     System.out.println("gwagon car");
         //     System.out.println("Driving audi car");
         // };
         // obj.drive();
-
 
         // Car obj = () -> {
         //     System.out.println("gwagon car");

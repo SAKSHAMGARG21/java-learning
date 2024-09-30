@@ -1,49 +1,26 @@
-import java.util.Scanner;
 
-// Other imports go here
-// Do NOT change the class name
-class TollBooth {
-    int cash;
-    int cars;
+import java.util.LinkedList;
+import java.util.Queue;
 
-    public TollBooth() {
-        cars = 0;
-        cash = 0;
-    }
-
-    public void payingCar() {
-        cash += 50;
-        cars++;
-        System.err.println(cars);
-    }
-
-    public void nopayCar() {
-        this.cars += 1;
-    }
-
-    public void display() {
-        System.out.println("Total Cash : " + cash + "/-");
-        System.out.println("Total Cars : " + cars);
-    }
-}
-
-class Main {
+public class Main {
     public static void main(String[] args) {
-        // Write your code here
-        Scanner sc = new Scanner(System.in);
-        TollBooth obj = new TollBooth();
-        char ch;
+        Queue<Integer> queue = new LinkedList<>();
 
-        while (true) {
-            ch = sc.next().charAt(0);
-            if (ch == 'p') {
-                obj.payingCar();
-            } else if (ch == 'n') {
-                obj.nopayCar();
-            } else {
-                obj.display();
-                break;
-            }
+        // Using offer to add elements
+        queue.offer(10);
+        queue.offer(20);
+        queue.offer(30);
+
+        while (!queue.isEmpty()) {
+            int ele= queue.poll();
+            queue.offer(ele);
+            queue.offer(ele);
         }
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.peek());
+            queue.poll();
+        }
+
     }
 }

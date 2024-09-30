@@ -2,7 +2,7 @@
 
 // this is of two types
 // 1. function overloading -> runtime polymorphism -> it use less than function overriding
-// 2. function over riding -> compile time polymorphism -> it use is more than function overloading
+// 2. function overriding -> compile time polymorphism -> it use is more than function overloading
 
 
 class aeroplane {

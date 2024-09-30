@@ -9,9 +9,9 @@ To implement a 2D `ArrayList` in Java, you essentially create an `ArrayList` of 
 
 2. **Initialize the Inner `ArrayLists`**:
    ```java
-   for (int i = 0; i < 3; i++) { // Example for 3 rows
-       twoDList.add(new ArrayList<>());
-   }
+    for (int i = 0; i < 3; i++) { // Example for 3 rows
+        twoDList.add(new ArrayList<>());
+    }
    ```
 
 3. **Add Elements to the Inner `ArrayLists`**:

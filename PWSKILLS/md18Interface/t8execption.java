@@ -29,6 +29,5 @@ public class t8execption {
 
         System.out.println(res);
         System.out.println("buy");
-
     }
 }

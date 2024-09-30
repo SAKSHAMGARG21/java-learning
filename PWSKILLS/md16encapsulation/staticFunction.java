@@ -1,20 +1,19 @@
 
-public class staticFunction {
+// public class staticFunction {
 
-    static int a;
-    static{
-        System.out.println("static function");
-        int a=10;
-        System.out.println(a);
-    }
-    public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.
-        System.out.println("main method");
-    }
+//     static int a;
+//     static{  // this will execute before main()
 
-}
+//         System.out.println("static function");
+//         int a=10;
+//         System.out.println(a);
+//     }
+//     public static void main(String[] args) {
+//         // Scanner sc = new Scanner(System.
+//         System.out.println("main method");
+//     }
 
-
+// }
 
 // public class staticFunction {
 
@@ -30,7 +29,7 @@ public class staticFunction {
 //         b=20;
 //     }
 //     {
-//         System.out.println("control in not- static block");
+//         System.out.println("control in non-static block");
 //         m=1;
 //         n=2;
 //     }
@@ -51,7 +50,6 @@ public class staticFunction {
 //         staticFunction.disp1();
 //         obj.disp2();
 //     }
-
 // }
 
 // import java.util.Scanner;
@@ -147,23 +145,24 @@ public class staticFunction {
 //     }
 // }
 
-public class staticFunction {
-    static int age;
+// public class staticFunction {
+//     static int age;
 
-    static{
-        System.out.println("static block");
-        age=17;
-    }
+//     static{
+//         System.out.println("static block");
+//         age=17;
+//     }
 
-    static void disp(){
-        System.out.println("disp static block");
-        System.out.println(age);
-    }
-    public static void main(String[] args) {
+//     static void disp(){
+//         System.out.println("disp static block");
 
-        System.out.println("main method");
-        disp();
+//         System.out.println(age);
+//     }
+//     public static void main(String[] args) {
+
+//         System.out.println("main method");
+//         disp();
         
-    }
-}
+//     }
+// }
 

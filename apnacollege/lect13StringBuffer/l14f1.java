@@ -1,7 +1,7 @@
 public class l14f1 {
     public static void main(String[] args) {
 
-        // StringBuilder sb = new StringBuilder("Tony");
+        StringBuilder sb = new StringBuilder("Tony");
 
         // System.out.println(sb);
         // System.out.println(sb.charAt(0));
@@ -25,7 +25,7 @@ public class l14f1 {
         // System.out.println(sb);
         // System.out.println(sb.length())
 
-        StringBuilder sb = new StringBuilder("hello");
+        // StringBuilder sb = new StringBuilder("hello");
         // StringBuilder sb2 = new StringBuilder();
         // for (int i = sb.length() - 1; i >= 0; i--){
         // sb2.append(sb.charAt(i));
