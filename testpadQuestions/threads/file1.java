@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 class ReverseGreet extends Thread {
     private int num;
@@ -6,6 +6,7 @@ class ReverseGreet extends Thread {
     public ReverseGreet(int num) {
         this.num = num;
     }
+
     public void run() {
         if (num > 1) {
             Thread nextThread = new ReverseGreet(num - 1);
@@ -31,5 +32,5 @@ public class file1 {
             thread.start();
         }
     }
-    
+
 }

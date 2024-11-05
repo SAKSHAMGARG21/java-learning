@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 class Mythread extends Thread {
 
-    public void run(){
+    public void run() {
         String tname = Thread.currentThread().getName();
         System.out.println(tname);
-        if(tname.equals("calc")){
+        if (tname.equals("calc")) {
             calc();
-        }else{
+        } else {
             messg();
         }
     }
@@ -50,6 +50,6 @@ public class t6multiThreadWithSingleRunmethod {
         t2.setName("messg");
 
         t1.start();
-        t2.start(); 
+        t2.start();
     }
 }
