@@ -14,6 +14,7 @@ class Node {
         this.right = null;
         this.left = null;
     }
+
 }
 
 class BinaryTree {
@@ -27,6 +28,19 @@ class BinaryTree {
         Node root = new Node(nodes[idx]);
         root.left = buildTree(nodes);
         root.right = buildTree(nodes);
+        return root;
+    }
+
+    public Node buildTree2(Node root, int val) {
+        if (root == null) {
+            root = new Node(val);
+            return root;
+        }
+        if (val == -1)
+            return null;
+        root = new Node(val);
+        root.left = buildTree(val);
+        root.right = buildTree(val);
         return root;
     }
 
@@ -288,12 +302,12 @@ class BinaryTree {
     }
 
     public void travleaf(Node root, ArrayList<Integer> arr) {
-        if (root == null ){
+        if (root == null) {
             return;
         }
-        if (root.left == null && root.right == null){
+        if (root.left == null && root.right == null) {
             arr.add(root.data);
-            return ;
+            return;
         }
         travleaf(root.left, arr);
         travleaf(root.right, arr);
@@ -346,6 +360,7 @@ class BinaryTree {
         // Return true only if current nodes match and both subtrees are identical
         return left && right && val;
     }
+
 }
 
 public class q1buildtree {
@@ -417,12 +432,9 @@ public class q1buildtree {
         Node root1 = bt.buildLevelorderTrav(nodes1);
         System.out.println("LevelOrder2");
         bt.printLevelWiseTestpad(root1);
-        
+
         System.out.println();
-        System.out.println(bt.isIdentical(root, root1) ? 1:0);
+        System.out.println(bt.isIdentical(root, root1) ? 1 : 0);
 
-
-        
-        
     }
 }

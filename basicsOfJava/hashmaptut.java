@@ -1,4 +1,5 @@
 import java.util.HashMap;
+
 // Key Points:
 // Allows null values and one null key.
 // Not synchronized (not thread-safe).
@@ -10,12 +11,12 @@ public class hashmaptut {
         hashMap.put("Banana", 2);
         hashMap.put("Cherry", 3);
 
-        
-        for (HashMap.Entry<String,Integer> entry : hashMap.entrySet()){
-            System.out.println(entry.getKey()+"->"+entry.getValue());
+        for (HashMap.Entry<String, Integer> entry : hashMap.entrySet()) {
+            System.out.println(entry.getKey() + "->" + entry.getValue());
         }
 
         System.out.println("HashMap: " + hashMap);
+        System.out.println("HashMap size: " + hashMap.size());
 
         // Accessing elements
         System.out.println("Value for key 'Apple': " + hashMap.get("Apple"));

@@ -33,7 +33,6 @@ class Pair<K, V> {
     }
 }
 
-
 class BinaryTree {
     int idx = -1; // Start from -1 because the first increment should set it to 0
 
@@ -175,7 +174,6 @@ class Solution {
         ans.addAll(topNode.values());
         return ans;
     }
-
 
     public List<Integer> verticalOrder(Node root) {
         // Map to hold vertical order traversal

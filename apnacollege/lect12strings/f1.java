@@ -93,8 +93,10 @@ public class f1 {
         // System.out.println(str); // Output: 12.34
 
         char[] charArray = { 'H', 'e', 'l', 'l', 'o' };
+        System.out.println(Character.toString(charArray[0]));
         String st = Arrays.toString(charArray);
         System.out.println(st);
+
         // System.out.println(charArray);
         String str1 = new String(charArray);
         System.out.println(str1);

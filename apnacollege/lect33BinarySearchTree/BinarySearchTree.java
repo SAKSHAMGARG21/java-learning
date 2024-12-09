@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -41,7 +42,8 @@ public class BinarySearchTree {
     }
 
     public void levelOrderTraversal(Node root) {
-        if (root == null) return;
+        if (root == null)
+            return;
 
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
@@ -68,7 +70,8 @@ public class BinarySearchTree {
     }
 
     public void inorderTraversal(Node root) {
-        if (root == null) return;
+        if (root == null)
+            return;
 
         inorderTraversal(root.left);
         System.out.print(root.data + " ");
@@ -76,7 +79,8 @@ public class BinarySearchTree {
     }
 
     public void preorderTraversal(Node root) {
-        if (root == null) return;
+        if (root == null)
+            return;
 
         System.out.print(root.data + " ");
         preorderTraversal(root.left);
@@ -84,7 +88,8 @@ public class BinarySearchTree {
     }
 
     public void postorderTraversal(Node root) {
-        if (root == null) return;
+        if (root == null)
+            return;
 
         postorderTraversal(root.left);
         postorderTraversal(root.right);
@@ -144,9 +149,57 @@ public class BinarySearchTree {
         return root;
     }
 
+    public void printInrangeInbst(Node root,int x,int y){
+        if (root==null){
+            return ;
+        }
+
+        if (root.data >= x && root.data<=y){
+            printInrangeInbst(root.left, x, y);
+            System.out.print(root.data+" ");
+            printInrangeInbst(root.right, x, y);
+        }else if (root.data >= y){
+            printInrangeInbst(root.left, x, y);
+        }else {
+            printInrangeInbst(root.right, x, y);
+        }
+
+    }
+
+
+    public void printroottoleafpath(Node root, ArrayList<Integer> arr){
+        if (root==null){
+            return ;
+        }
+        arr.add(root.data);
+        if (root.left==null && root.right==null){
+            printpath(arr);
+        }else{
+            printroottoleafpath(root.left, arr);
+            printroottoleafpath(root.right, arr);
+        }
+        arr.remove(arr.size()-1);
+    }
+
+    public void printpath(ArrayList<Integer> arr){
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i)+"->");
+        }
+        System.out.println();
+    }
+
+
     public static void main(String[] args) {
+
+        // int[] arr = { 50, 30, 20, 40, 70, 60, 80 };
+        int[] arr={8,5,3,1,4,6,10,11,14};
         BinarySearchTree bst = new BinarySearchTree();
-        bst.takeInput();
+        for (int i = 0; i < arr.length; i++) {
+            bst.root = bst.insertInput(bst.root, arr[i]);
+        }
+        
+        // BinarySearchTree bst = new BinarySearchTree();
+        // bst.takeInput();
 
         System.out.println("Printing the data in BST (Level Order):");
         bst.levelOrderTraversal(bst.root);
@@ -170,7 +223,17 @@ public class BinarySearchTree {
             bst.root = bst.deleteNodeBST(bst.root, 30); // Example delete
 
             System.out.println("Printing the data in BST after deletion (Level Order):");
-            bst.levelOrderTraversal(bst .root);
+            bst.levelOrderTraversal(bst.root);
         }
+
+        System.out.println("In range of the bst");
+        bst.printInrangeInbst(bst.root,20,60);
+    
+        
+        // ArrayList<Integer> arr = new ArrayList([1,3,4,5,6,8,10,11,14 ]);
+        ArrayList<Integer> arrlist = new ArrayList<>();
+        System.out.println("Print the path of the bst");
+        bst.printroottoleafpath(bst.root, arrlist);
+
     }
 }

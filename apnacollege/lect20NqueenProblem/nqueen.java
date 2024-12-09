@@ -96,7 +96,7 @@ class Solution {
 
 public class nqueen {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 2;
         Solution solution = new Solution();
         List<List<String>> result = solution.solveNQueens(n);
         System.out.println(result);

@@ -13,7 +13,6 @@ public class subsequnce {
         subsequnce(str, idx + 1, newstr + ch);
 
         subsequnce(str, idx + 1, newstr);
-
     }
 
     public static void main(String[] args) {
