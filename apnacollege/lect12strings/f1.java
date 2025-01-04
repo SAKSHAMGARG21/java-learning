@@ -61,8 +61,9 @@ public class f1 {
         // String str = "123";
         // int num = Integer.parseInt(str);
 
-        // String str = "123";
+        String str = "123";
         // Integer num = Integer.valueOf(str);
+        System.out.println(str.length());
 
         // int num = 123;
         // String str = String.valueOf(num);
@@ -70,10 +71,10 @@ public class f1 {
         // int num = 123;
         // String str = Integer.toString(num);
 
-        // int num = 123;
-        // String str = String.format("%04d", num);
-        // String str = String.format("%d", num);
-        // System.out.println(str);
+        int num = 123;
+        String str2 = String.format("%04d", num);
+        // String str2 = String.format("%d", num);
+        System.out.println(str2);
 
         // float f = 12.34f;
         // String str = String.valueOf(f);

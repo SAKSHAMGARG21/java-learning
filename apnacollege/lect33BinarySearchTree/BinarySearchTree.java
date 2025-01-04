@@ -235,5 +235,6 @@ public class BinarySearchTree {
         System.out.println("Print the path of the bst");
         bst.printroottoleafpath(bst.root, arrlist);
 
+        
     }
 }

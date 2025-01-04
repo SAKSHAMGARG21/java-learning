@@ -1,29 +1,30 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Solution {
+class Solution {
     static int solve(int[] val, int[] wt, int cap, int idx, int[][] dp) {
-        if (idx == 0) {
-            if (wt[0] <= cap) {
-                return val[0];
-            } else {
-                return 0;
-            }
+        // Base case: If there are no items or capacity is 0
+        if (idx == -1 || cap == 0) {
+            return 0;
         }
 
+        // Check if the value is already computed
         if (dp[idx][cap] != -1) {
             return dp[idx][cap];
         }
 
         int inc = 0;
+        // Include the current item if it's within the capacity
         if (wt[idx] <= cap) {
             inc = val[idx] + solve(val, wt, cap - wt[idx], idx - 1, dp);
         }
 
-        int exc = 0 + solve(val, wt, cap, idx - 1, dp);
+        // Exclude the current item
+        int exc = solve(val, wt, cap, idx - 1, dp);
 
+        // Store the result in the dp array
         dp[idx][cap] = Math.max(inc, exc);
         return dp[idx][cap];
-
     }
 
     static int solveTabulation(int[] val, int[] wt, int cap, int n) {
@@ -108,31 +109,34 @@ public class Solution {
         return curr[cap];
     }
 
-    static int knapsack(int[] weight, int[] value, int n, int maxWeight) {
-        int[][] dp = new int[maxWeight + 1][maxWeight + 1];
-        for (int i = 0; i <= maxWeight; i++) {
+    static int knapsack(int[] value, int[] weight, int n, int maxWeight) {
+        int[][] dp = new int[n + 1][maxWeight + 1];
+        for (int i = 0; i <= n; i++) {
             Arrays.fill(dp[i], -1);
         }
-        // return solve(value, weight, maxWeight, n - 1, dp);
+        return solve(value, weight, maxWeight, n - 1, dp);
         // return solveTabulation(value, weight,maxWeight,n);
-        return solveTabulationspaceOtm(value, weight, maxWeight, n);
+        // return solveTabulationspaceOtm(value, weight, maxWeight, n);
     }
 }
 
 public class kanpSack {
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 4, 5 };
-        int n = 4;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < n - i + 1; j++) {
-                System.out.print("[ ");
-                for (int j2 = j; j2 < i + j; j2++) {
-                    System.out.print(arr[j2] + " ");
-                }
-                System.out.print("]");
-                System.out.println();
-            }
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        int[] b = new int[n];
+
+        for (int i = 0; i < b.length; i++) {
+            a[i] = sc.nextInt();
         }
+
+        for (int i = 0; i < b.length; i++) {
+            b[i] = sc.nextInt();
+        }
+
+        int cap = sc.nextInt();
+        System.out.println(Solution.knapsack(a, b, n, cap));
     }
 }

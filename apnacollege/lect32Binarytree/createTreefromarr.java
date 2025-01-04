@@ -33,7 +33,6 @@ class Pair<K, V> {
     }
 }
 
-
 class BinaryTree {
     int idx = -1; // Start from -1 because the first increment should set it to 0
 
@@ -108,7 +107,8 @@ class BinaryTree {
 class Solution {
 
     private int postIndex;
-    private  int findPosition(int[] in, int startIndex, int element, int n) {
+
+    private int findPosition(int[] in, int startIndex, int element, int n) {
         for (int i = startIndex; i < n; i++) {
             if (in[i] == element) {
                 return i;
@@ -116,6 +116,7 @@ class Solution {
         }
         return -1;
     }
+
     private Node buildTreeUtil(int[] in, int[] post, int startIndex, int endIndex) {
         if (postIndex < 0 || startIndex > endIndex) {
             return null;
@@ -123,27 +124,31 @@ class Solution {
         int element = post[postIndex--];
         Node root = new Node(element);
         int pos = findPosition(in, startIndex, element, in.length);
+
         // Build the right subtree first (since we are using postorder)
         root.right = buildTreeUtil(in, post, pos + 1, endIndex);
         root.left = buildTreeUtil(in, post, startIndex, pos - 1);
         return root;
     }
-    public Node buildTree(int[] in, int[] post,int n) {
-        postIndex = n- 1; // Initialize postIndex to the last index
+
+    public Node buildTree(int[] in, int[] post, int n) {
+        postIndex = n - 1; // Initialize postIndex to the last index
         return buildTreeUtil(in, post, 0, n - 1);
     }
-    public void preordertrav(Node root){
-        if (root==null){
-            return ;
+
+    public void preordertrav(Node root) {
+        if (root == null) {
+            return;
         }
 
-        System.out.print(root.data+" ");
+        System.out.print(root.data + " ");
         preordertrav(root.left);
         preordertrav(root.right);
     }
 
     private int preIndex;
-    private  int findPosition2(int[] in, int startIndex, int element, int n) {
+
+    private int findPosition2(int[] in, int startIndex, int element, int n) {
         for (int i = startIndex; i < n; i++) {
             if (in[i] == element) {
                 return i;
@@ -151,6 +156,7 @@ class Solution {
         }
         return -1;
     }
+
     private Node buildTreehelperinandpre(int[] in, int[] pre, int startIndex, int endIndex) {
         if (preIndex >= in.length || startIndex > endIndex) {
             return null;
@@ -163,8 +169,9 @@ class Solution {
         root.right = buildTreehelperinandpre(in, pre, pos + 1, endIndex);
         return root;
     }
-    public Node buildTreeinandpre(int[] in, int pre[],int n) {
-        preIndex = 0; // Initialize postIndex to the last index
+
+    public Node buildTreeinandpre(int[] in, int pre[], int n) {
+        preIndex = 0; 
         return buildTreehelperinandpre(in, pre, 0, n - 1);
     }
 
@@ -185,15 +192,18 @@ public class createTreefromarr {
             post[i] = sc.nextInt();
         }
 
-
         BinaryTree bt = new BinaryTree();
         Solution s = new Solution();
-        
-        Node root=s.buildTree(in,post, n);
+
+        Node root = s.buildTree(in, post, n);
         s.preordertrav(root);
         System.out.println();
-        Node root2=s.buildTreeinandpre(in, post, n);
+        bt.printLevelWiseTestpad(root);
+        System.out.println();
+        Node root2 = s.buildTreeinandpre(in, post, n);
         s.preordertrav(root2);
+        System.out.println();
+        bt.printLevelWiseTestpad(root);
 
     }
 }

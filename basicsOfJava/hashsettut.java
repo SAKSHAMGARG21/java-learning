@@ -28,7 +28,7 @@ public class hashsettut {
         System.out.println("After removing 'Banana': " + hashSet);
         System.out.println("Size: " + hashSet.size());
         System.out.println("Is empty: " + hashSet.isEmpty());
-        hashSet.clear();
+        // hashSet.clear();
         System.out.println("After clearing: " + hashSet);
         // HashSet: [Apple, Cherry, Banana]
         // Contains 'Banana': true
@@ -39,7 +39,7 @@ public class hashsettut {
         // Size: 2
         // Is empty: false
         // After clearing: []
-        
+
         // HashSet<String> hashSet = new HashSet<>();
         // hashSet.add("Apple");
         // hashSet.add("Banana");
@@ -47,8 +47,12 @@ public class hashsettut {
 
         // Iterator<String> iterator = hashSet.iterator();
         // while (iterator.hasNext()) {
-        //     System.out.println(iterator.next());
+        // System.out.println(iterator.next());
         // }
+
+        for (String s : hashSet) {
+            System.out.println(s);
+        }
 
     }
 }

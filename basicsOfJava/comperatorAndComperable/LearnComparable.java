@@ -1,4 +1,6 @@
-// neeraj sir codes
+/* -------------------------------------------------------------------------- */
+/*                              Neeraj sir codes                              */
+/* -------------------------------------------------------------------------- */
 
 // import java.util.*;
 
@@ -25,14 +27,14 @@
 //     }
 // }
 
-// // class Student{
-// //     int roll;
-// //     String name;
-// //     public Student(String name, int roll) {
-// //         this.name = name;
-// //         this.roll = roll;
-// //     }
-// // }
+// class Student{
+//     int roll;
+//     String name;
+//     public Student(String name, int roll) {
+//         this.name = name;
+//         this.roll = roll;
+//     }
+// }
 
 // public class LearnComparable {
 //     public static void main(String[] args) {
@@ -53,96 +55,47 @@
 //     }
 // }
 
- 
-package Collections; 
-
- 
-
-import java.util.*; 
-
- 
-
+import java.util.*;
 //class MyComparator implements Comparator<Student> { 
-
 // 
-
 //    @Override 
-
 //    public int compare(Student o1, Student o2) { 
-
 //        return o1.roll - o2.roll; 
-
 //    } 
-
 //} 
 
- 
+class Student {
+    int roll;
+    String name;
 
-class Student { 
+    public Student(String name, int roll) {
+        this.name = name;
+        this.roll = roll;
+    }
 
-    int roll; 
+    @Override
+    public String toString() {
+        return " " + name + " " + roll + "\n";
+    }
+}
 
-    String name; 
-
- 
-
-    public Student(String name, int roll) { 
-
-        this.name = name; 
-
-        this.roll = roll; 
-
-    } 
-
- 
-
-    @Override 
-
-    public String toString() { 
-
-        return " " + name + " " + roll + "\n"; 
-
-    } 
-
-} 
-public class LearnComparable { 
-
-    public static void main(String[] args) { 
-
-        Student s1 = new Student("Neeraj", 2); 
-
-        Student s2 = new Student("Rahul", 1); 
-
-        Student s3 = new Student("Rohit", 7); 
-
-        Student s4 = new Student("Akash", 4); 
-
- 
-
-        List<Student> students = new ArrayList<Student>(); 
-
-        students.add(s1); 
-
-        students.add(s2); 
-
-        students.add(s3); 
-
-        students.add(s4); 
-
-        Collections.sort(students, new Comparator<Student>() { 
-
-            @Override 
-
-            public int compare(Student o1, Student o2) { 
-
-                return o1.roll - o2.roll; 
-
-            } 
-
-        }); 
-
-        System.out.println(students); 
-
-    } 
-
-} 
+public class LearnComparable {
+    public static void main(String[] args) {
+        Student s1 = new Student("Neeraj", 2);
+        Student s2 = new Student("Rahul", 1);
+        Student s3 = new Student("Rohit", 7);
+        Student s4 = new Student("Akash", 4);
+        List<Student> students = new ArrayList<Student>();
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+        students.add(s4);
+        Collections.sort(students, new Comparator<Student>() {
+            // @Override
+            public int compare(Student o1, Student o2) {
+                return o1.roll - o2.roll;
+            }
+        });
+        System.out.println(students);
+    }
+}

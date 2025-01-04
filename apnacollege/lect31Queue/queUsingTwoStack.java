@@ -11,13 +11,13 @@ class Que {
 
     public void add(int data) {
 
-        if (!s1.isEmpty()){
+        if (!s1.isEmpty()) {
             s2.push(s1.pop());
         }
 
         s1.push(data);
 
-        if(!s2.isEmpty()){
+        if (!s2.isEmpty()) {
             s1.push(s2.pop());
         }
 
@@ -25,7 +25,7 @@ class Que {
 
     public int remove() {
 
-        if (isEmpty()){
+        if (isEmpty()) {
             System.out.println("que is empty");
             return -1;
         }
@@ -35,14 +35,13 @@ class Que {
     }
 
     public int peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             System.out.println("que is empty");
             return -1;
         }
 
         return s1.peek();
     }
-
 }
 
 public class queUsingTwoStack {

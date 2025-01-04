@@ -1,11 +1,12 @@
+import java.util.*;
 
 class Edge {
     int src;
     int dest;
 
-    public gh(int s,int d){
-        this.src=s;
-        this.dest=d;
+    public Edge(int s, int d) {
+        this.src = s;
+        this.dest = d;
     }
 }
 
@@ -22,11 +23,11 @@ class creategh {
     }
 
     public void printgh(ArrayList<Edge>[] gh) {
-
         for (int i = 0; i < gh.length; i++) {
             System.out.print(i + "->");
             for (int j = 0; j < gh[i].size(); j++) {
-                System.out.print(gh[i].get(j) + " ");
+                Edge eg = gh[i].get(j);
+                System.out.print(eg.dest + " ");
             }
             System.out.println();
         }
@@ -44,7 +45,7 @@ class solution {
                     if (isCyclye(gh, vist, eg.dest, curr)) {
                         return true;
                     }
-                } else if (curr != par) {
+                } else if (eg.dest != par) {
                     return true;
                 }
             }
@@ -69,12 +70,13 @@ public class isCycleundir {
         ArrayList<Edge>[] gh = new ArrayList[v];
 
         creategh cg = new creategh();
-        cg.createGraph(gh, arr, e, v);
+        cg.createGraph(gh, arr);
 
-        cg.printgh();
+        cg.printgh(gh);
 
         solution sb = new solution();
-        sb.isCyclye();
+        boolean[] vist = new boolean[v];
+        System.out.println(sb.isCyclye(gh, vist, 0, -1) ? "Yes" : "No");
 
     }
 }

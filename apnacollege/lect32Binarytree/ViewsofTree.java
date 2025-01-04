@@ -111,7 +111,7 @@ class Solution {
             return;
         }
 
-        if (lvl == list.size())
+        // if (lvl == list.size())
             list.add(root.data);
 
         lefthelper(root.left, list, lvl + 1);

@@ -60,16 +60,6 @@ class GraphwithArrayList {
             System.out.println();
         }
     }
-
-    // public void Bfs(ArrayList<Edge>[] gh) {
-
-    // // Queue<>
-
-    // }
-
-    // public void Dfs() {
-
-    // }
 }
 
 public class creategraph {

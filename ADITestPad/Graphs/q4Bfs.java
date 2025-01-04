@@ -18,7 +18,6 @@ class Graph {
     }
 
     void printGraph() {
-
         for (Map.Entry<Integer, List<Integer>> entry : adjVertices.entrySet()) {
             System.out.print("Vertex " + entry.getKey() + " is connected to: ");
             // System.out.println(entry.getValue().toString());
@@ -47,6 +46,7 @@ class Graph {
         }
     }
 }
+
 // 4
 // 5
 // 0 1
@@ -72,6 +72,7 @@ public class q4Bfs {
         s = Integer.parseInt(sc.nextLine().trim());
         g.BFS(s);
 
-        // g.printGraph();
+        System.out.println();
+        g.printGraph();
     }
 }

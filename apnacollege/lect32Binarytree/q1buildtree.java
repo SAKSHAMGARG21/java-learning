@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.*;
 
-import javax.management.Query;
+// import javax.management.Query;
 
 class Node {
     int data;
@@ -14,7 +14,6 @@ class Node {
         this.right = null;
         this.left = null;
     }
-
 }
 
 class BinaryTree {
@@ -25,22 +24,10 @@ class BinaryTree {
         if (nodes[idx] == -1) {
             return null;
         }
+
         Node root = new Node(nodes[idx]);
         root.left = buildTree(nodes);
         root.right = buildTree(nodes);
-        return root;
-    }
-
-    public Node buildTree2(Node root, int val) {
-        if (root == null) {
-            root = new Node(val);
-            return root;
-        }
-        if (val == -1)
-            return null;
-        root = new Node(val);
-        root.left = buildTree(val);
-        root.right = buildTree(val);
         return root;
     }
 
@@ -233,6 +220,41 @@ class BinaryTree {
         }
     }
 
+    // Helper class to store the result of the check
+    class Pair {
+        boolean isBalanced;
+        int height;
+
+        Pair(boolean isBalanced, int height) {
+            this.isBalanced = isBalanced;
+            this.height = height;
+        }
+    }
+
+    // Function to check whether a binary tree is balanced or not
+    private Pair check(Node root) {
+        if (root == null) {
+            return new Pair(true, 0);
+        }
+
+        Pair left = check(root.left);
+        Pair right = check(root.right);
+
+        boolean lt = left.isBalanced;
+        boolean rt = right.isBalanced;
+        boolean diff = Math.abs(left.height - right.height) <= 1;
+
+        boolean isBalanced = lt && rt && diff;
+        int height = Math.max(left.height, right.height) + 1;
+
+        return new Pair(isBalanced, height);
+    }
+
+    public boolean isBalancedoptimze(Node root) {
+        // Your Code here
+        return check(root).isBalanced;
+    }
+
     public void zigzagtrav(Node root) {
 
         Queue<Node> q = new LinkedList<>();
@@ -361,6 +383,97 @@ class BinaryTree {
         return left && right && val;
     }
 
+    class Pair2 {
+        Boolean isSum;
+        int val;
+
+        public Pair2(Boolean s, int v) {
+            this.isSum = s;
+            this.val = v;
+        }
+    }
+
+    public Pair2 sumTreehelper(Node root) {
+
+        if (root == null) {
+            return new Pair2(true, 0);
+        }
+        if (root.left == null && root.right == null) {
+            return new Pair2(true, root.data);
+        }
+
+        Pair2 lft = sumTreehelper(root.left);
+        Pair2 rght = sumTreehelper(root.right);
+
+        boolean lans = lft.isSum;
+        boolean rans = rght.isSum;
+
+        boolean cond = ((lft.val + rght.val) == root.data);
+
+        Pair2 ans = new Pair2(false, -1);
+        if (lans && rans && cond) {
+            ans.isSum = true;
+            ans.val = 2 * root.data;
+        } else {
+            ans.isSum = false;
+        }
+        return ans;
+    }
+
+    public Node lcainbt(Node root,int n1,int n2){
+
+        if (root==null){
+            return null;
+        }
+
+        if (root.data==n1 || root.data==n2){
+            return root;
+        }
+
+        Node lans=lcainbt(root.left,n1,n2);
+        Node rans=lcainbt(root.right,n1,n2);
+
+        if (lans!=null && rans!=null){
+            return root;
+        }else if (lans!=null && rans==null){
+            return lans;
+        }else if (lans==null && rans!=null){
+            return rans;
+        }
+        else{
+            return null;
+        }
+    }
+
+    public boolean findPath(Node root, int n, ArrayList<Integer> path) {
+        if (root == null) {
+            return false;
+        }
+
+        path.add(root.data);
+
+        if (root.data == n) {
+            return true;
+        }
+
+        if (findPath(root.left, n, path) || findPath(root.right, n, path)) {
+            return true;
+        }
+
+        path.remove(path.size()-1);
+        return false;
+    }
+
+    public int kthAncestor(Node root, int k, int node) {
+        ArrayList<Integer> path = new ArrayList<>();
+        if (!findPath(root, node, path)) {
+            return -1; // Node not found
+        }
+        if (path.size() <= k) {
+            return -1;
+        }
+        return path.get(path.size() - 1 - k);
+    }
 }
 
 public class q1buildtree {
@@ -376,6 +489,7 @@ public class q1buildtree {
 
         // Node root = bt.buildTree(nodes);
         // bt.preordertrav(root);
+        // bt.postordertrav(root);
         // System.out.println();
         // bt.inordertrav(root);
         // System.out.println();
@@ -387,6 +501,7 @@ public class q1buildtree {
         // bt.printLevelWiseTestpad(root);
 
         Node root = bt.buildLevelorderTrav(nodes);
+
         System.out.println("LevelOrder");
         bt.printLevelWiseTestpad(root);
 
@@ -422,19 +537,24 @@ public class q1buildtree {
         // ArrayList<Integer> arr= bt.boundrytraversal(root);
         // System.out.println(arr);
 
-        int m = sc.nextInt();
-        int nodes1[] = new int[m];
+        // int m = sc.nextInt();
+        // int nodes1[] = new int[m];
 
-        for (int i = 0; i < m; i++) {
-            nodes1[i] = sc.nextInt();
-        }
+        // for (int i = 0; i < m; i++) {
+        // nodes1[i] = sc.nextInt();
+        // }
 
-        Node root1 = bt.buildLevelorderTrav(nodes1);
-        System.out.println("LevelOrder2");
-        bt.printLevelWiseTestpad(root1);
+        // Node root1 = bt.buildLevelorderTrav(nodes1);
+        // // System.out.println("LevelOrder2");
+        // bt.printLevelWiseTestpad(root1);
+
+        // System.out.println();
+        // System.out.println(bt.isIdentical(root, root1) ? 1 : 0);
+
+        // System.out.println();
+        // System.out.println(bt.sumTreehelper(root).isSum);
 
         System.out.println();
-        System.out.println(bt.isIdentical(root, root1) ? 1 : 0);
-
+        System.out.println(bt.kthAncestor(root, 2, 4));
     }
 }
