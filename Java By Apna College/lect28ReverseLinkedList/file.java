@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class file {
     Node head;
     private int size;
@@ -94,37 +96,36 @@ public class file {
 
         Node prev = null;
         Node curr = head;
-        reverselist2(curr,prev);
-
+        reverselist2(curr, prev);
 
         // if (head == null || head.next == null) {
-        //     return;
+        // return;
         // }
 
         // Node prev = null;
         // Node curr = head;
         // while (curr != null) {
-        //     Node fard = curr.next;
-        //     curr.next = prev;
+        // Node fard = curr.next;
+        // curr.next = prev;
 
-        //     prev = curr;
-        //     curr = fard;
+        // prev = curr;
+        // curr = fard;
         // }
 
         // head = prev;
 
     }
 
-    public void reverselist2(Node curr,Node prev) {
+    public void reverselist2(Node curr, Node prev) {
 
-        if (curr==null){
-            head=prev;
-            return ;
+        if (curr == null) {
+            head = prev;
+            return;
         }
 
-        Node fard=curr.next;
-        curr.next=prev;
-        reverselist2(fard,curr);
+        Node fard = curr.next;
+        curr.next = prev;
+        reverselist2(fard, curr);
     }
 
     public static void main(String[] args) {

@@ -21,7 +21,7 @@ public class inbuiltStack {
         stack.push(20);
         stack.push(30);
 
-        System.out.println("Size: " + stack.size()); // 30
+        System.out.println("Size: " + stack.size()); // 3
 
         // Pop elements from the stack
         System.out.println("Popped: " + stack.pop()); // 30

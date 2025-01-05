@@ -39,7 +39,7 @@ class Solution {
             prev = curr;
             curr = fard;
         }
-        head.next=null;
+        head.next = null;
         return prev;
     }
 
@@ -48,13 +48,13 @@ class Solution {
         Node revhead = revList(mid);
 
         Node curr = head;
-        while (curr != null && revhead!=null) {
-            if (curr.num!=revhead.num){
+        while (curr != null && revhead != null) {
+            if (curr.num != revhead.num) {
                 return false;
             }
 
-            curr=curr.next;
-            revhead=revhead.next;
+            curr = curr.next;
+            revhead = revhead.next;
         }
 
         return true;
