@@ -111,6 +111,8 @@ public class f1 {
 
     public static double getfloatval(double r) {
         String str = String.format("%.2f", r);
-        return Double.parseDouble(str);
+        Double res = Double.parseDouble(str);
+        // return Double.parseDouble(str);
+        return res;
     }
 }
