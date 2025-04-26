@@ -44,13 +44,13 @@ public class Rec1 {
         return fibonaci(n - 1) + fibonaci(n - 2);
     }
 
-    public static void sequence(int a, int b, int n) {
+    public static void fibsequence(int a, int b, int n) {
         if (n == 0)
             return;
 
         int c = a + b;
-        System.out.println(c);
-        sequence(b, c, n - 1);
+        System.out.print(c + " ");
+        fibsequence(b, c, n - 1);
     }
 
     public static int calcPow(int x, int n) {
@@ -81,6 +81,26 @@ public class Rec1 {
         }
     }
 
+    public double myPow(double x, int n) {
+        return binaryExp(x, (long) n);
+    }
+
+    private double binaryExp(double x, long n) {
+        if (n == 0) {
+            return 1;
+        }
+
+        if (n < 0) {
+            return 1 / binaryExp(x, -n);
+        }
+
+        if (n % 2 == 1) {
+            return x * binaryExp(x * x, (n) / 2);
+        } else {
+            return binaryExp(x * x, n / 2);
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
@@ -96,10 +116,10 @@ public class Rec1 {
         // int fib=fibonaci(1);
         // System.out.println(fib);
 
-        // int a=0,b=1;
-        // System.out.println(a);
-        // System.out.println(b);
-        // sequence(a,b,7-2);
+        int a = 0, b = 1;
+        System.out.println(a);
+        System.out.println(b);
+        sequence(a, b, 7 - 2);
 
         // int pow=calcPow(2, 5);
         int logpow = calcPowlog(2, 5);

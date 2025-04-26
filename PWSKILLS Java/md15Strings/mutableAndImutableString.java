@@ -5,12 +5,12 @@ public class mutableAndImutableString {
         Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
 
-        String brand="pwskills "; // this is imutable string which cannot be changed
+        String brand = "pwskills "; // this is imutable string which cannot be changed
         System.out.println(brand);
         brand.concat("college walha");
         System.out.println(brand);
 
-        StringBuilder brand1=new StringBuilder("pwskills"); // this is mutable string
+        StringBuilder brand1 = new StringBuilder("pwskills"); // this is mutable string
         // which can be changed
         System.out.println(brand);
         brand1.append("college walha");
@@ -61,11 +61,11 @@ public class mutableAndImutableString {
         // System.out.println(s2);
         // System.out.println(s3);
 
-        // String s1="pw";
-        // String s2="pw"+"java";
-        // String s3="pw"+"skill"+"java";
-        // String s4=s1+s2;
-        // String s5="pw"+100+99;
+        // String s1 = "pw";
+        // String s2 = "pw" + "java";
+        // String s3 = "pw" + "skill" + "java";
+        // String s4 = s1 + s2;
+        // String s5 = "pw" + 100 + 99;
         // System.out.println(s1);
         // System.out.println(s2);
         // System.out.println(s3);
@@ -117,25 +117,30 @@ public class mutableAndImutableString {
         // sb.setCharAt(1, 'A');
         // System.out.println(sb);
 
-        // StringBuffer sb = new StringBuffer(150); // now the capacity is 150 as defined;
+        // StringBuffer sb = new StringBuffer(150); // now the capacity is 150 as
+        // defined;
         // System.out.println(sb.capacity());
         // sb.append("java");
         // System.out.println(sb);
         // sb.trimToSize();
         // System.out.println(sb.capacity());
-        
+
         // StringBuffer sb=new StringBuffer("saksham");
         // System.out.println(sb);
         // System.out.println(sb.reverse());
 
-
         // StringBuffer
-        // Synchronization: StringBuffer is synchronized, meaning it is thread-safe. Multiple threads can access it without causing data inconsistency.
-        // Performance: Due to synchronization, StringBuffer is slower than StringBuilder when used in a single-threaded environment.
+        // Synchronization: StringBuffer is synchronized, meaning it is thread-safe.
+        // Multiple threads can access it without causing data inconsistency.
+        // Performance: Due to synchronization, StringBuffer is slower than
+        // StringBuilder when used in a single-threaded environment.
         // Version: StringBuffer has been available since JDK 1.0.
+        
         // StringBuilder
-        // Synchronization: StringBuilder is not synchronized, meaning it is not thread-safe. It should be used when thread safety is not a concern.
-        // Performance: StringBuilder is faster than StringBuffer because it does not have the overhead of synchronization.
+        // Synchronization: StringBuilder is not synchronized, meaning it is not
+        // thread-safe. It should be used when thread safety is not a concern.
+        // Performance: StringBuilder is faster than StringBuffer because it does not
+        // have the overhead of synchronization.
         // Version: StringBuilder was introduced in JDK 1.5.
     }
 

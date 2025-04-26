@@ -51,8 +51,7 @@ public class v1test {
         // • The local variables will be created as part of the block execution in which
         // it is declared and
         // destroyed once that block execution completes. Hence the scope of the local
-        // variables is exactly the
-        // same as the scope of the block in which we declared.
+        // variables is exactly the same as the scope of the block in which we declared.
 
 
 

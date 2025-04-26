@@ -29,12 +29,3 @@ Bitwise operators work directly on the binary digits (bits) of integer values. T
 
 6. **Shift Right (`>>`)**: Shifts the bits of an integer to the right by a specified number of positions. For signed integers, the leftmost bits are filled based on the sign bit (arithmetic shift).
    - Example: `12 >> 2` results in `3` (binary: `1100 >> 2 = 11`).
-
-Bitwise operators are powerful tools for efficient data manipulation and are widely used in various programming tasks¹²³.
-
-Do you have any specific questions or need examples in a particular programming language?
-
-Source: Conversation with Copilot, 8/6/2024
-(1) Bitwise AND operator in Programming - GeeksforGeeks. https://www.geeksforgeeks.org/bitwise-and-operator-in-programming/.
-(2) C Bitwise Operators: AND, OR, XOR, Complement and Shift Operations. https://www.programiz.com/c-programming/bitwise-operators.
-(3) Bitwise Operators in C - GeeksforGeeks. https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/.

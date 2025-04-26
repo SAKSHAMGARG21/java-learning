@@ -15,7 +15,7 @@ public class f1 {
 
         for (int i = 0; i < arr.length; i++) {
             arr[i]=(int)sc.nextInt();
-        }    
+        }
 
 
         // int arr2[]={2,4,1,4,9,5};

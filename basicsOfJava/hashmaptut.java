@@ -34,5 +34,20 @@ public class hashmaptut {
         System.out.println("Keys: " + hashMap.keySet());
         System.out.println("Values: " + hashMap.values());
         System.out.println("Entries: " + hashMap.entrySet());
+        // Apple->1
+        // Cherry->3
+        // Banana->2
+        // HashMap: {Apple=1, Cherry=3, Banana=2}
+        // HashMap size: 3
+        // Value for key 'Apple': 1
+        // After removing 'Banana': {Apple=1, Cherry=3}
+        // HashMap: {Apple=1, Cherry=3}
+        // Value for key 'Apple': 1
+        // After removing 'Banana': {Apple=1, Cherry=3}
+        // Contains key 'Cherry': true
+        // Contains value 2 : false
+        // Keys: [Apple, Cherry]
+        // Values: [1, 3]
+        // Entries: [Apple=1, Cherry=3]
     }
 }

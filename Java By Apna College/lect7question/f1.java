@@ -63,7 +63,6 @@ public class f1 {
                 System.out.print(c + " ");
             }
         }
-
     }
 
     public static void main(String[] args) {

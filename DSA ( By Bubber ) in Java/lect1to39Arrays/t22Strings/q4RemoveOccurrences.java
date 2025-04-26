@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class RemoveOccurrences {
+public class q4RemoveOccurrences {
     public static String removeOccurrences(String s, String part) {
         while (s.contains(part)) {
             s = s.replace(part, "");

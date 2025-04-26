@@ -1,6 +1,7 @@
 import java.util.*;
 
-public class q2AggressiveCows {
+public class q1AggressiveCows {
+    
     public static boolean isPossible(int[] arr, int mid, int n, int m) {
         int cowcnt = 1;
         int lp = arr[0];
@@ -15,7 +16,6 @@ public class q2AggressiveCows {
             }
         }
         return false;
-
     }
 
     public static int findPositions(int[] arr, int n, int m) {

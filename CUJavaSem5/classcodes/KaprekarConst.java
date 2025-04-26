@@ -10,16 +10,18 @@ public class KaprekarConst {
             System.out.println(n);
         }
     }
-    private static int kap(int n) { 
-        String numStr = String.format("%04d", n); 
-        String incStr = sortStr(numStr, false); 
-        String decStr = sortStr(numStr, true); 
 
-        int incNum = Integer.parseInt(incStr); 
-        int decNum = Integer.parseInt(decStr); 
+    private static int kap(int n) {
+        String numStr = String.format("%04d", n);
+        String incStr = sortStr(numStr, false);
+        String decStr = sortStr(numStr, true);
 
-        return decNum - incNum; 
+        int incNum = Integer.parseInt(incStr);
+        int decNum = Integer.parseInt(decStr);
+
+        return decNum - incNum;
     }
+
     static String sortStr(String numStr, boolean asc) {
         char[] arr = numStr.toCharArray();
         Arrays.sort(arr);
@@ -28,6 +30,7 @@ public class KaprekarConst {
         }
         return new String(arr);
     }
+
     private static void reverseArr(char[] arr) {
         int l = 0, r = arr.length - 1;
         while (l < r) {

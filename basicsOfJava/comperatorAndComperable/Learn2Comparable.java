@@ -1,6 +1,21 @@
 import java.util.*;
 
-class Student {
+// class Student {
+//     String name;
+//     int age;
+
+//     public Student(String name, int age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     @Override
+//     public String toString() {
+//         return "Student [name=" + name + ", age=" + age + "]";
+//     }
+// }
+
+class Student implements Comparable<Student> {
     String name;
     int age;
 
@@ -9,34 +24,19 @@ class Student {
         this.age = age;
     }
 
+    public int compareTo(Student s2) {
+        if (this.age == s2.age) {
+            return this.name.compareTo(s2.name);
+        }
+        return Integer.compare(this.age, s2.age); // increasing order
+        // return Integer.compare(s2.age, this.age); // descreasing order
+    }
+
     @Override
     public String toString() {
         return "Student [name=" + name + ", age=" + age + "]";
     }
 }
-
-// class Student implements Comparable<Student> {
-// String name;
-// int age;
-
-// public Student(String name, int age) {
-// this.name = name;
-// this.age = age;
-// }
-
-// public int compareTo(Student s2) {
-// if (this.age == s2.age) {
-// return this.name.compareTo(s2.name);
-// }
-// return Integer.compare(this.age, s2.age); // increasing order
-// // return Integer.compare(s2.age, this.age); // descreasing order
-// }
-
-// @Override
-// public String toString() {
-// return "Student [name=" + name + ", age=" + age + "]";
-// }
-// }
 
 public class Learn2Comparable {
     public static void main(String[] args) {

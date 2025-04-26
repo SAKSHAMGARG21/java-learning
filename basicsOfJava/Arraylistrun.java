@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Arraylistrun {
+    
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
 
@@ -15,6 +16,7 @@ public class Arraylistrun {
         System.out.println("ArrayList: " + arrayList);
         System.out.println("Element at index 1: " + arrayList.get(1));
         arrayList.set(1, "Blueberry");
+        arrayList.add(0, "Grapes");
         System.out.println("After setting index 1 to 'Blueberry': " + arrayList);
         System.out.println(arrayList.size());
         arrayList.remove("Apple");

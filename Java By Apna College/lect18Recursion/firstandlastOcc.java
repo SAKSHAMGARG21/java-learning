@@ -38,7 +38,7 @@ public class firstandlastOcc {
             }
         }
 
-        findocc(str, idx + 1, currchar);
+        findocc(str, idx + 1, ch);
     }
 
     public static void main(String[] args) {

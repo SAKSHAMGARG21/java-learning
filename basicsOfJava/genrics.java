@@ -1,13 +1,15 @@
-class mygen<T1,T2>{
+import java.util.*;
+
+class mygen<T1, T2> {
 
     int age;
     private T1 name;
     private T2 number;
 
-    public mygen(int  age, T1 name, T2 number) {
+    public mygen(int age, T1 name, T2 number) {
         this.age = age;
-        this.name=name;
-        this.number=number;
+        this.name = name;
+        this.number = number;
     }
 
     public T1 getName() {
@@ -26,15 +28,15 @@ class mygen<T1,T2>{
         this.number = number;
     }
 }
-public class genrics{
+
+public class genrics {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        mygen<String,Integer>  obj = new mygen<String,Integer>(25,"Rahul",123);
+        mygen<String, Integer> obj = new mygen<String, Integer>(25, "Rahul", 123);
         System.out.println(obj.age);
         System.out.println(obj.getName());
         System.out.println(obj.getNumber());
-
 
     }
 }

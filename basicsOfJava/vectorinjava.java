@@ -6,7 +6,7 @@ public class vectorinjava {
         Vector<Integer> vector = new Vector<>();
 
         // Add elements to the vector
-        vector.add(1);
+        vector.add(1);k
         vector.add(2);
         vector.add(3);
 
