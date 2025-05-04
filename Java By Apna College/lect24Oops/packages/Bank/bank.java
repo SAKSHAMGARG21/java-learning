@@ -6,7 +6,6 @@
 
 // Data Hinding  : It is a mechanism to hide the suspecius data from the outside world.
 
-
 // package Back;
 
 class Account {

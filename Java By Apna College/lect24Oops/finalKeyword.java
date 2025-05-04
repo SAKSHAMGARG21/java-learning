@@ -21,7 +21,7 @@
 //     }
 // }
 
-// 3.Final Classes: A class declared as final cannot be subclassed. This means that no other class can extend a final class.
+// 3.Final Classes: A class declared as final cannot be inhertied by subclassed. This means that no other class can extend a final class.
 // public final class MyClass {
 //     // ...
 // }

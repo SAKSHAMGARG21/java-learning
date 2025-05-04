@@ -1,6 +1,7 @@
 // Inheritance  
 
 // intro 
+// single inheritance
 // import java.util.*;
 // class shape{
 //     String color;

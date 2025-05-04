@@ -1,20 +1,18 @@
-public class intro {
+import java.util.*;
+class Node {
     Node head;
-    private int size;
+    Node next;
+    int size;
+    int num;
 
-    intro() {
+    Node() {
         this.size = 0;
     }
 
-    class Node {
-        int num;
-        Node next;
-
-        Node(int data) {
-            this.num = data;
-            this.next = null;
-            size++;
-        }
+    Node(int data) {
+        this.num = data;
+        this.next = null;
+        size++;
     }
 
     public void addtohead(int data) {
@@ -89,9 +87,11 @@ public class intro {
     public int getSize() {
         return size;
     }
+}
 
+public class intro {
     public static void main(String[] args) {
-        intro l1 = new intro();
+        Node l1 = new Node();
 
         l1.addtohead(4);
         l1.addtohead(1);
@@ -112,7 +112,9 @@ public class intro {
         l1.addtohead(8);
         l1.printList();
         System.out.println(l1.getSize());
+        
 
+        System.out.println(l1.head.num);
 
     }
 }

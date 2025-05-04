@@ -1,8 +1,8 @@
 // Polymorphism -> is to do work in different ways
 
 // this is of two types
-// 1. function overloading -> runtime polymorphism -> it use less than function overriding
-// 2. function over riding -> compile time polymorphism -> it use is more than function overloading
+// 2. function overloading -> compile time polymorphism -> it use is more than function overloading
+// 1. function overriding -> runtime polymorphism -> it use less than function overriding
 
 import java.util.*;
 

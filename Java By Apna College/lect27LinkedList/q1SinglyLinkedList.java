@@ -11,7 +11,7 @@ class Node {
     }
 }
 
-public class SinglyLinkedList {
+public class q1SinglyLinkedList {
     private Node head;
     private Node tail;
 
@@ -109,7 +109,7 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
-        SinglyLinkedList list = new SinglyLinkedList();
+        q1SinglyLinkedList list = new q1SinglyLinkedList();
 
         // Create a new linked list node
         list.insertAtHead(64);
@@ -122,7 +122,7 @@ public class SinglyLinkedList {
         list.print();
 
         // Insert at position
-        list.insertAtPosition(4, 58);
+        list.insertAtPosition(3, 58);
         list.print();
 
         // Delete the first element

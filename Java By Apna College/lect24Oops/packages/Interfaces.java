@@ -31,7 +31,8 @@ public class Interfaces {
         student s1 = new student();
 
         s1.name = "tony";
-        System.out.println(s1.school);
+        // System.out.println(s1.school);
+        System.out.println(student.school);
         System.out.println(s1.name);
 
     }

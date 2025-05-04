@@ -5,7 +5,7 @@ class Animal {
 }
 
 class Dog extends Animal {
-    // @Override
+    @Override // called as amutations
     void sound() {
         System.out.println("The dog barks");
     }

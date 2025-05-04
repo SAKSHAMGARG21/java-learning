@@ -23,6 +23,7 @@ class Solution {
             c++;
             temp = temp.next;
         }
+
         int k = c - n;
 
         Node prev = head;

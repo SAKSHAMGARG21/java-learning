@@ -14,7 +14,7 @@
 //             mxdiff = -1; // Resetting the maximum difference for each iteration
 //             for (int i = 1; i < temp.size(); i++) {
 //                 double diff = temp.get(i) - temp.get(i - 1);
-                if (diff > mxdiff) {
+//                if (diff > mxdiff) {
 //                     mxdiff = diff;
 //                     mxidx = i;
 //                 }
