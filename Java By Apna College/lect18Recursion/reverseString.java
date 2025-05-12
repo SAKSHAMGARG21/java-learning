@@ -13,7 +13,6 @@ public class reverseString {
         StringBuilder sb = new StringBuilder();
         revstr(str, 0, sb);
         return sb.toString();
-
     }
 
     public static void main(String[] args) {

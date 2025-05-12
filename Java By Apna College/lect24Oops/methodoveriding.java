@@ -12,7 +12,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-    // @Override
+    @Override
     void sound() {
         System.out.println("The cat meows");
     }
@@ -20,7 +20,7 @@ class Cat extends Animal {
 
 public class methodoveriding {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal();
+        // Animal myAnimal = new Animal();
         Animal myDog = new Dog();
         Animal myCat = new Cat();
 

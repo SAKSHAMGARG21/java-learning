@@ -307,7 +307,6 @@ class BinaryTree {
                 level++;
             }
         }
-
         return sum;
     }
 
@@ -500,10 +499,10 @@ public class q1buildtree {
         // System.out.println("LevelOrder Traversal Testpad without spaces");
         // bt.printLevelWiseTestpad(root);
 
-        Node root = bt.buildLevelorderTrav(nodes);
+        // Node root = bt.buildLevelorderTrav(nodes);
 
-        System.out.println("LevelOrder");
-        bt.printLevelWiseTestpad(root);
+        // System.out.println("LevelOrder");
+        // bt.printLevelWiseTestpad(root);
 
         // System.out.println();
         // int countbtnodes = bt.countNodeofbt(root);
@@ -554,7 +553,7 @@ public class q1buildtree {
         // System.out.println();
         // System.out.println(bt.sumTreehelper(root).isSum);
 
-        System.out.println();
-        System.out.println(bt.kthAncestor(root, 2, 4));
+        // System.out.println();
+        // System.out.println(bt.kthAncestor(root, 2, 4));
     }
 }

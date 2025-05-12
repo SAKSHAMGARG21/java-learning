@@ -49,17 +49,17 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        // Scanner scanner = new Scanner(System.in);
-        // int n = scanner.nextInt();
-        // int[] arr = new int[n];
-        // for (int i = 0; i < n; i++) {
-        // arr[i] = scanner.nextInt();
-        // }
-        int[] arr = { 3, 2, 4, 5, 6, 9 };
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        // int[] arr = { 3, 2, 4, 5, 6, 9 };
 
-        quicksort(arr, 0, 6 - 1);
+        quicksort(arr, 0, 5-1);
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.print(arr[i] + " ");
         }
 

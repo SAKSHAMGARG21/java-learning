@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class LinkedListinCollectionFramwork {
     public static void main(String[] args) {
