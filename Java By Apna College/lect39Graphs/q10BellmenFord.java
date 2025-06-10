@@ -42,16 +42,33 @@ class createGraph {
             graph[i] = new ArrayList<Edge>();
         }
 
+        // graph[0].add(new Edge(0, 1, 2));
+        // graph[0].add(new Edge(0, 2, 4));
+
+        // graph[1].add(new Edge(1, 2, -4));
+
+        // graph[2].add(new Edge(2, 3, 2));
+
+        // graph[3].add(new Edge(3, 4, 4));
+
+        // graph[4].add(new Edge(4, 1, -1));
+        // negative cycle 
+        // graph[4].add(new Edge(4, 1, -10));
+
         graph[0].add(new Edge(0, 1, 2));
         graph[0].add(new Edge(0, 2, 4));
 
-        graph[1].add(new Edge(1, 2, -4));
+        graph[1].add(new Edge(1, 3, 7));
+        graph[1].add(new Edge(1, 2, 1));
 
-        graph[2].add(new Edge(2, 3, 2));
+        graph[2].add(new Edge(2, 4, 3));
 
-        graph[3].add(new Edge(3, 4, 4));
+        graph[3].add(new Edge(3, 5, 1));
 
-        graph[4].add(new Edge(4, 1, -1));
+        graph[4].add(new Edge(4, 3, 2));
+        graph[4].add(new Edge(4, 5, 5));
+
+        
 
     }
 
@@ -66,18 +83,13 @@ class createGraph {
     }
 }
 
-class Pair implements Comparable<Pair> {
+class Pair {
     public int node;
     public int dist;
 
     public Pair(int node, int dist) {
         this.node = node;
         this.dist = dist;
-    }
-
-    public int compareTo(Pair p) {
-        return this.dist - p.dist; // Sort in ascending order
-        // return p.dist - this.dist; // Sort in descending order
     }
 }
 
@@ -89,18 +101,17 @@ class Solution {
                 dis[i] = Integer.MAX_VALUE;
         }
 
-        // for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < graph[j].size(); k++) {
-                Edge e = graph[j].get(k);
-                int u = e.src;
-                int v = e.dest;
-                if (dis[u] != Integer.MAX_VALUE && dis[u] + e.wt < dis[v]) { // relaxation
-                    dis[v] = dis[u] + e.wt;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n; j++) {
+                for (Edge e:graph[j]) {
+                    int u = e.src;
+                    int v = e.dest;
+                    if (dis[u] != Integer.MAX_VALUE && dis[u] + e.wt < dis[v]) { // relaxation
+                        dis[v] = dis[u] + e.wt;
+                    }
                 }
             }
         }
-        // }
 
         for (int j = 0; j < n; j++) {
             for (int k = 0; k < graph[j].size(); k++) {
@@ -124,23 +135,23 @@ public class q10BellmenFord {
     public static void main(String[] args) {
         createGraph cg = new createGraph();
 
-        Scanner sc = new Scanner(System.in);
-        int v = sc.nextInt();
-        int e = sc.nextInt();
-        int[][] arr = new int[e][3];
-        for (int i = 0; i < e; i++) {
-            for (int j = 0; j < 3; j++) {
-                arr[i][j] = sc.nextInt();
-            }
-        }
-        ArrayList<Edge> graph[] = new ArrayList[v];
-        cg.graphCreationWithLoop(graph, arr);
-
-        // int v = 5;
+        // Scanner sc = new Scanner(System.in);
+        // int v = sc.nextInt();
+        // int e = sc.nextInt();
+        // int[][] arr = new int[e][3];
+        // for (int i = 0; i < e; i++) {
+        // for (int j = 0; j < 3; j++) {
+        // arr[i][j] = sc.nextInt();
+        // }
+        // }
         // ArrayList<Edge> graph[] = new ArrayList[v];
-        // cg.graphcreation(graph);
+        // cg.graphCreationWithLoop(graph, arr);
 
-        // cg.printGraph(graph);
+        int v = 6;
+        ArrayList<Edge> graph[] = new ArrayList[v];
+        cg.graphcreation(graph);
+
+        cg.printGraph(graph);
 
         Solution sb = new Solution();
         sb.Bellmenford(graph, 0, v);

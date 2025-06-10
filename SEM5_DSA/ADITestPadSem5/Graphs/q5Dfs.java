@@ -32,14 +32,14 @@ class Graph {
         vist[st] = true;
 
         for (int i = 0; i < adjVertices.get(st).size(); i++) {
-            int adj = adjVertices.get(st).get(i);
-            if (!vist[adj]) {
-                DFSUtil(adj, vist);
+            int next = adjVertices.get(st).get(i);
+            if (!vist[next]) {
+                DFSUtil(next, vist);
             }
         }
     }
 
-    void DFS(int v) {
+    void DFS(int st) {
         int V = adjVertices.size();
         boolean[] visited = new boolean[V];
 
@@ -48,7 +48,7 @@ class Graph {
         // DFSUtil(i, visited);
         // }
 
-        DFSUtil(v, visited); // all passed
+        DFSUtil(st, visited); // all passed
     }
 }
 

@@ -111,7 +111,7 @@ class Solution {
             return;
         }
 
-        // if (lvl == list.size())
+        if (lvl == list.size())
             list.add(root.data);
 
         lefthelper(root.left, list, lvl + 1);
@@ -148,7 +148,11 @@ class Solution {
             return ans;
         }
 
+        // Map to store the top view nodes
+        // Key: horizontal distance, Value: node value
         Map<Integer, Integer> topNode = new TreeMap<>();
+        // Queue to perform level order traversal
+        // Pair of node and its horizontal distance
         Queue<Pair<Node, Integer>> q = new LinkedList<>();
 
         q.add(new Pair<>(root, 0));
@@ -271,11 +275,11 @@ public class ViewsofTree {
 
         Solution s = new Solution();
 
-        // ArrayList<Integer> res = s.leftviewoftree(root);
-        // System.out.println(res);
+        ArrayList<Integer> res = s.leftviewoftree(root);
+        System.out.println(res);
 
-        // ArrayList<Integer> res2 = s.rightviewoftree(root);
-        // System.out.println(res2);
+        ArrayList<Integer> res2 = s.rightviewoftree(root);
+        System.out.println(res2);
 
         List<Integer> res3 = s.topView(root);
         System.out.println(res3);

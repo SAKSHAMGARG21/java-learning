@@ -13,6 +13,7 @@ public class findsubsets {
             printsubsets(arr);
             return;
         }
+        
         // add
         arr.add(n);
         funfindsubsets(n - 1, arr);
@@ -28,5 +29,6 @@ public class findsubsets {
         int n = 3;
         ArrayList<Integer> arr = new ArrayList<>();
         funfindsubsets(n, arr);
+        printsubsets(arr);
     }
 }

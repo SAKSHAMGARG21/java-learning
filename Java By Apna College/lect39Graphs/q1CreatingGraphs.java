@@ -65,20 +65,108 @@ public class q1CreatingGraphs {
             System.out.print(i + "-> ");
             for (int j = 0; j < graph[i].size(); j++) {
                 Edge e = graph[i].get(j);
-                System.out.print(e.dest + " ");
+                System.out.print("{"+e.src+","+e.dest + "}");
+                if (j<graph[i].size()-1){
+                    System.out.print(";");
+                }
             }
             System.out.println();
         }
     }
 }
 
-// 0-> 2
-// 1-> 2 3
-// 2-> 0 1 3
-// 3-> 1 2
+// import java.util.*;
 
-// # 0 1 2 3
-// 0 0 0 1 0
-// 1 0 0 1 1
-// 2 1 1 0 1
-// 3 0 1 1 0
+// // input:
+// // 5 4
+// // 1 3
+// // 0 2
+// // 3 0
+// // 4 3
+// // 1 3
+// // output:
+// // 0-> 2 
+// // 1-> 3 
+// // 2-> 
+// // 3-> 0 
+// // 4-> 3 
+
+// // input:
+// // 7 16
+// // 0 1
+// // 0 2
+// // 1 0
+// // 1 3
+// // 2 0
+// // 2 4
+// // 3 1
+// // 3 4
+// // 3 5
+// // 4 2
+// // 4 3
+// // 4 5
+// // 5 3
+// // 5 4
+// // 5 6
+// // 6 5
+// // output:
+// // 0-> 1 2 
+// // 1-> 0 3 
+// // 2-> 0 4 
+// // 3-> 1 4 5 
+// // 4-> 2 3 5 
+// // 5-> 3 4 6 
+// // 6-> 5 
+
+// class Edge{
+//     int src;
+//     int dest;
+//     int wt;
+
+//     public Edge(int s,int d){
+//         this.src=s;
+//         this.dest=d;
+//     }
+// }
+
+// class Graph{
+//     List<List<Edge>> adjList;
+//     public Graph(int v){
+//         adjList = new ArrayList<>();
+//         for (int i=0;i<v;i++){
+//             adjList.add(new ArrayList<>());
+//         }
+//     }
+
+//     public void addEdge(int u,int v){
+//         adjList.get(u).add(new Edge(u,v));
+//     }
+
+//     public void printGraph(){
+//         for (int i = 0; i < adjList.size(); i++) {
+//             System.out.print(i+"-> ");
+//             for (int j = 0; j < adjList.get(i).size(); j++) {
+//                 Edge eg = adjList.get(i).get(j);
+//                 System.out.print(eg.dest+" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+// public class q1CreatingGraphs {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int V = sc.nextInt();
+//         int E = sc.nextInt();
+
+//         Graph cg = new Graph(V);
+//         for (int i = 0; i < E; i++) {
+//             int u = sc.nextInt();
+//             int v = sc.nextInt();
+//             cg.addEdge(u,v);
+//         }
+
+//         cg.printGraph();
+//     }
+// }

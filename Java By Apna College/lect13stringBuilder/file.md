@@ -94,6 +94,7 @@ public class Main {
         sb.delete(5, 6);
         sb.reverse();
         s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        s.deleteCharAt(2);
         System.out.println(sb.toString()); // Output: avaJ olleH
     }
 }

@@ -3,12 +3,6 @@
 // // 2-> 0 1 3
 // // 3-> 1 2
 
-// // # 0 1 2 3
-// // 0 0 0 1 0
-// // 1 0 0 1 1
-// // 2 1 1 0 1
-// // 3 0 1 1 0
-
 import java.util.*;
 
 class Edge {
@@ -55,7 +49,7 @@ class solution {
     }
 }
 
-public class q6detectCycle {
+public class q6detectCycleInDirected {
     public static void main(String[] args) {
         int v = 4;
         ArrayList<Edge> graph[] = new ArrayList[v];

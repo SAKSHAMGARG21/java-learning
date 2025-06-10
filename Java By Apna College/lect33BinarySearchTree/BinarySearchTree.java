@@ -163,7 +163,6 @@ public class BinarySearchTree {
         }else {
             printInrangeInbst(root.right, x, y);
         }
-
     }
 
 
@@ -234,7 +233,6 @@ public class BinarySearchTree {
         ArrayList<Integer> arrlist = new ArrayList<>();
         System.out.println("Print the path of the bst");
         bst.printroottoleafpath(bst.root, arrlist);
-
         
     }
 }

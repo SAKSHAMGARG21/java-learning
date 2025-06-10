@@ -13,8 +13,6 @@
 //     }
 
 //     public int compareTo(Student that) {
-//         System.out.println(this.name+" "+that.name);
-//         System.out.println(this.roll+" "+that.roll);
 //         if (this.roll == that.roll) {
 //             return this.name.compareTo(that.name);
 //         }

@@ -4,7 +4,7 @@ public class spreadOper {
         System.out.println("Sum: " + sum);
     }
 
-    public static int sum(int... numbers) {
+    public static int sum(int ...numbers) {
         int total = 0;
         for (int number : numbers) {
             total += number;

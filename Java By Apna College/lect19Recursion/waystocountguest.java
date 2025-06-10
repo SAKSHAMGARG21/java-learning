@@ -16,7 +16,7 @@ public class waystocountguest {
 
     public static void main(String[] args) {
 
-        int n = 4;
+        int n = 5;
         int ans = countways(n);
         System.out.println(ans);
     }

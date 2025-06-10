@@ -94,21 +94,21 @@ public class q11MSTPrimsAlgo {
     public static void main(String[] args) {
         createGraph cg = new createGraph();
 
-        Scanner sc = new Scanner(System.in);
-        int v = sc.nextInt();
-        int e = sc.nextInt();
-        int[][] arr = new int[e][3];
-        for (int i = 0; i < e; i++) {
-            for (int j = 0; j < 3; j++) {
-                arr[i][j] = sc.nextInt();
-            }
-        }
+        // Scanner sc = new Scanner(System.in);
+        // int v = sc.nextInt();
+        // int e = sc.nextInt();
+        // int[][] arr = new int[e][3];
+        // for (int i = 0; i < e; i++) {
+        //     for (int j = 0; j < 3; j++) {
+        //         arr[i][j] = sc.nextInt();
+        //     }
+        // }
 
-        // int v = 4;
+        int v = 4;
         ArrayList<Edge> graph[] = new ArrayList[v];
 
-        // cg.graphcreation(graph);
-        cg.graphCreationWithLoop(graph, arr);
+        cg.graphcreation(graph);
+        // cg.graphCreationWithLoop(graph, arr);
 
         // for (int i = 0; i < graph.length; i++) {
         // System.out.print(i + "-> ");

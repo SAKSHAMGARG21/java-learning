@@ -121,6 +121,7 @@ class Solution {
         if (postIndex < 0 || startIndex > endIndex) {
             return null;
         }
+
         int element = post[postIndex--];
         Node root = new Node(element);
         int pos = findPosition(in, startIndex, element, in.length);

@@ -29,5 +29,15 @@ public class PriorityQueueExample {
             Employee emp = pq.poll();
             System.out.println(emp.id + " " + emp.salary);
         }
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        
+        maxHeap.add(10);
+        maxHeap.add(5);
+        maxHeap.add(20);
+        
+        while (!maxHeap.isEmpty()) {
+            System.out.println(maxHeap.poll());  // prints in descending order: 20, 10, 5
+        }
     }
+    
 }
