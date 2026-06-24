@@ -61,9 +61,9 @@ public class f1 {
         // String str = "123";
         // int num = Integer.parseInt(str);
 
-        String str = "123";
+        // String str = "123";
         // Integer num = Integer.valueOf(str);
-        System.out.println(str.length());
+        // System.out.println(str.length());
 
         // int num = 123;
         // String str = String.valueOf(num);
@@ -71,10 +71,10 @@ public class f1 {
         // int num = 123;
         // String str = Integer.toString(num);
 
-        int num = 123;
-        String str2 = String.format("%04d", num);
+        // int num = 123;
+        // String str2 = String.format("%04d", num);
         // String str2 = String.format("%d", num);
-        System.out.println(str2);
+        // System.out.println(str2);
 
         // float f = 12.34f;
         // String str = String.valueOf(f);
@@ -86,7 +86,9 @@ public class f1 {
         // String str = Float.toString(f);
         // System.out.println(str); // Output: 12.34
 
-        // double d=24.456756;
+        // double d = 24.456756;
+        // String str = String.format("%.3f",d);
+        // System.out.println(str); // Output: 12.34
         // System.out.format("%.2f",d);
 
         // float f = 12.34f;
@@ -99,14 +101,14 @@ public class f1 {
         System.out.println(st);
 
         // System.out.println(charArray);
-        String str1 = new String(charArray);
-        System.out.println(str1);
+        // String str1 = new String(charArray);
+        // System.out.println(str1);
         // System.out.println(str); // Output: Hello
         // strings are Immutable in java
 
-        double d = 24.456756;
-        double r = getfloatval(d);
-        System.out.println(r);
+        // double d = 24.456756;
+        // double r = getfloatval(d);
+        // System.out.println(r);
     }
 
     public static double getfloatval(double r) {

@@ -53,10 +53,10 @@ public class mutableAndImutableString {
         // s1=s1.concat("college wahla");
         // System.out.println(s1);
 
-        // String s1="Pwjava";
-        // String s2=s1.concat("skill");
-        // String s3=new String("pwskill");
-        // s3=s3.concat("java");
+        // String s1 = "Pwjava";
+        // String s2 = s1.concat("skill");
+        // String s3 = new String("pwskill");
+        // s3 = s3.concat("java");
         // System.out.println(s1);
         // System.out.println(s2);
         // System.out.println(s3);
@@ -97,7 +97,7 @@ public class mutableAndImutableString {
         // a=20;
         // System.out.println(a);
 
-        // final StringBuffer sb=new StringBuffer("tony");
+        // final StringBuffer sb = new StringBuffer("tony");
         // sb.append("stack");
         // sb=new StringBuffer("virat");
         // System.out.println(sb);

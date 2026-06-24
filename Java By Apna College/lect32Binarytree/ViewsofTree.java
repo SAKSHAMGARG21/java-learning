@@ -179,47 +179,82 @@ class Solution {
         return ans;
     }
 
-    public List<Integer> verticalOrder(Node root) {
-        // Map to hold vertical order traversal
-        Map<Integer, Map<Integer, List<Integer>>> nodes = new TreeMap<>();
-        Queue<Pair<Node, Pair<Integer, Integer>>> q = new LinkedList<>();
-        List<Integer> ans = new ArrayList<>();
+    // public List<Integer> verticalOrder(Node root) {
+    // // Map to hold vertical order traversal
+    // Map<Integer, Map<Integer, List<Integer>>> nodes = new TreeMap<>();
+    // Queue<Pair<Node, Pair<Integer, Integer>>> q = new LinkedList<>();
+    // List<Integer> ans = new ArrayList<>();
 
-        if (root == null) {
-            return ans;
+    // if (root == null) {
+    // return ans;
+    // }
+
+    // // Starting with the root node at horizontal distance 0 and level 0
+    // q.add(new Pair<>(root, new Pair<>(0, 0)));
+
+    // while (!q.isEmpty()) {
+    // Pair<Node, Pair<Integer, Integer>> temp = q.poll();
+    // Node frontNode = temp.getKey();
+    // int hd = temp.getValue().getKey(); // Horizontal distance
+    // int lvl = temp.getValue().getValue(); // Level
+
+    // // Add the node's value to the corresponding hd and lvl
+    // nodes.putIfAbsent(hd, new TreeMap<>());
+    // nodes.get(hd).putIfAbsent(lvl, new ArrayList<>());
+    // nodes.get(hd).get(lvl).add(frontNode.data);
+
+    // // Add left and right children to the queue
+    // if (frontNode.left != null) {
+    // q.add(new Pair<>(frontNode.left, new Pair<>(hd - 1, lvl + 1)));
+    // }
+    // if (frontNode.right != null) {
+    // q.add(new Pair<>(frontNode.right, new Pair<>(hd + 1, lvl + 1)));
+    // }
+    // }
+
+    // // Construct the final answer from the map
+    // for (Map<Integer, List<Integer>> levelMap : nodes.values()) {
+    // for (List<Integer> levelList : levelMap.values()) {
+    // ans.addAll(levelList);
+    // }
+    // }
+
+    // return ans;
+    // }
+    static class Pair {
+        Node node;
+        int hd; // horizontal distance
+
+        Pair(Node n, int h) {
+            node = n;
+            hd = h;
         }
+    }
 
-        // Starting with the root node at horizontal distance 0 and level 0
-        q.add(new Pair<>(root, new Pair<>(0, 0)));
+    static ArrayList<ArrayList<Integer>> verticalOrder(Node root) {
+        TreeMap<Integer, ArrayList<Integer>> map = new TreeMap<>();
+        Queue<Pair> q = new LinkedList<>();
+
+        q.add(new Pair(root, 0));
 
         while (!q.isEmpty()) {
-            Pair<Node, Pair<Integer, Integer>> temp = q.poll();
-            Node frontNode = temp.getKey();
-            int hd = temp.getValue().getKey(); // Horizontal distance
-            int lvl = temp.getValue().getValue(); // Level
+            Pair curr = q.poll();
+            Node temp = curr.node;
+            int hd = curr.hd;
 
-            // Add the node's value to the corresponding hd and lvl
-            nodes.putIfAbsent(hd, new TreeMap<>());
-            nodes.get(hd).putIfAbsent(lvl, new ArrayList<>());
-            nodes.get(hd).get(lvl).add(frontNode.data);
+            map.putIfAbsent(hd, new ArrayList<>());
+            map.get(hd).add(temp.data);
 
-            // Add left and right children to the queue
-            if (frontNode.left != null) {
-                q.add(new Pair<>(frontNode.left, new Pair<>(hd - 1, lvl + 1)));
+            if (temp.left != null) {
+                q.add(new Pair(temp.left, hd - 1));
             }
-            if (frontNode.right != null) {
-                q.add(new Pair<>(frontNode.right, new Pair<>(hd + 1, lvl + 1)));
+            if (temp.right != null) {
+                q.add(new Pair(temp.right, hd + 1));
             }
         }
 
-        // Construct the final answer from the map
-        for (Map<Integer, List<Integer>> levelMap : nodes.values()) {
-            for (List<Integer> levelList : levelMap.values()) {
-                ans.addAll(levelList);
-            }
-        }
-
-        return ans;
+        // Convert to ArrayList<ArrayList<Integer>>
+        return new ArrayList<>(map.values());
     }
 
     public List<Integer> bottomView(Node root) {
@@ -257,6 +292,33 @@ class Solution {
         return ans;
     }
 
+    public ArrayList<Integer> diagonal(Node root) {
+        // add your code here.
+        ArrayList<Integer> result = new ArrayList<>();
+        if (root == null)
+            return result;
+
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            Node curr = q.poll();
+
+            while (curr != null) {
+                result.add(curr.data);
+
+                // Left child goes into the queue for next diagonal
+                if (curr.left != null) {
+                    q.add(curr.left);
+                }
+                // Move to right child (same diagonal)
+                curr = curr.right;
+            }
+        }
+
+        return result;
+    }
+
 }
 
 public class ViewsofTree {
@@ -284,13 +346,11 @@ public class ViewsofTree {
         List<Integer> res3 = s.topView(root);
         System.out.println(res3);
 
-        List<Integer> res4= s.verticalOrder(root);
+        List<Integer> res4 = s.verticalOrder(root);
         System.out.println(res4);
 
-        List<Integer> res5=s.bottomView(root);
+        List<Integer> res5 = s.bottomView(root);
         System.out.println(res5);
-
-
 
     }
 }

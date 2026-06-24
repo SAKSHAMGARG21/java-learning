@@ -88,3 +88,18 @@ Questions Links:
 Longest Palindromic Subsequence : https://leetcode.com/problems/longest-palindromic-subsequence/description/
 
 
+Lect 137
+https://www.youtube.com/watch?v=8HEjwf28LyE&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=146&ab_channel=CodeHelp-byBabbar
+Questions Links:
+
+EDIT Distance: https://leetcode.com/problems/edit-distance/description/
+
+Lect 138
+Questions Links:
+
+Wildcard Pattern Matching: https://leetcode.com/problems/wildcard-matching/description/
+
+Lect 139
+Questions Links:
+
+Wildcard Pattern Matching: https://leetcode.com/problems/wildcard-matching/description/

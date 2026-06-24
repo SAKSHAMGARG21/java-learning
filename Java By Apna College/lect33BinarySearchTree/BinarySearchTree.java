@@ -118,6 +118,7 @@ public class BinarySearchTree {
         }
 
         if (root.data == val) {
+            // +++++++++++++
             // 0 child
             if (root.left == null && root.right == null) {
                 return null;

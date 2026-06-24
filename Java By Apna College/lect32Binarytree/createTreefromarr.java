@@ -62,16 +62,14 @@ class BinaryTree {
             Node node = q.poll();
 
             if (idx < nodes.length && nodes[idx] != -1) {
-                node.left = new Node(nodes[idx]);
+                node.left = new Node(nodes[idx++]);
                 q.add(node.left);
             }
-            idx++;
 
             if (idx < nodes.length && nodes[idx] != -1) {
-                node.right = new Node(nodes[idx]);
+                node.right = new Node(nodes[idx++]);
                 q.add(node.right);
             }
-            idx++;
         }
         return root;
     }
@@ -156,12 +154,14 @@ class Solution {
             }
         }
         return -1;
+        // return Arrays.binarySearch(in, element);
     }
 
     private Node buildTreehelperinandpre(int[] in, int[] pre, int startIndex, int endIndex) {
         if (preIndex >= in.length || startIndex > endIndex) {
             return null;
         }
+
         int element = pre[preIndex++];
         Node root = new Node(element);
         int pos = findPosition2(in, startIndex, element, in.length);

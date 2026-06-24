@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.*;
 
 // import javax.management.Query;
@@ -111,7 +109,6 @@ class BinaryTree {
                 }
             }
         }
-
     }
 
     public void printLevelWiseTestpad(Node root) {
@@ -201,6 +198,33 @@ class BinaryTree {
         int dia3 = left + right + 1;
 
         return Math.max(dia3, Math.max(dia2, dia1));
+    }
+
+    class PairDia {
+        int dia;
+        int height;
+
+        public PairDia(int d, int h) {
+            this.dia = d;
+            this.height = h;
+        }
+    }
+
+    // diameter fast
+    public PairDia diameterFast(Node root) {
+        if (root == null) {
+            return new PairDia(0, 0);
+        }
+
+        PairDia left = diameterFast(root.left);
+        PairDia right = diameterFast(root.right);
+        int op1 = left.dia;
+        int op2 = right.dia;
+        int op3 = left.height + right.height + 1;
+        PairDia ans = new PairDia(0, 0);
+        ans.dia = Math.max(op1, Math.max(op2, op3));
+        ans.height = Math.max(left.height, right.height) + 1;
+        return ans;
     }
 
     public boolean isBalanced(Node root) {
@@ -293,19 +317,35 @@ class BinaryTree {
         q.add(null);
         int level = 0;
         int sum = 0;
+        // while (!q.isEmpty()) {
+        // Node temp = q.poll();
+        // if (temp != null) {
+        // if (level == k)
+        // sum += temp.data;
+        // if (temp.left != null)
+        // q.add(temp.left);
+        // if (temp.right != null)
+        // q.add(temp.right);
+        // } else if (!q.isEmpty()) {
+        // q.add(null);
+        // level++;
+        // }
+        // }
+
         while (!q.isEmpty()) {
-            Node temp = q.poll();
-            if (temp != null) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                Node temp = q.poll();
                 if (level == k)
                     sum += temp.data;
                 if (temp.left != null)
                     q.add(temp.left);
                 if (temp.right != null)
                     q.add(temp.right);
-            } else if (!q.isEmpty()) {
-                q.add(null);
-                level++;
             }
+            level++;
+            if (level > k)
+                break; // No need to continue if we've passed the desired level
         }
         return sum;
     }
@@ -419,27 +459,26 @@ class BinaryTree {
         return ans;
     }
 
-    public Node lcainbt(Node root,int n1,int n2){
+    public Node lcainbt(Node root, int n1, int n2) {
 
-        if (root==null){
+        if (root == null) {
             return null;
         }
 
-        if (root.data==n1 || root.data==n2){
+        if (root.data == n1 || root.data == n2) {
             return root;
         }
 
-        Node lans=lcainbt(root.left,n1,n2);
-        Node rans=lcainbt(root.right,n1,n2);
+        Node lans = lcainbt(root.left, n1, n2);
+        Node rans = lcainbt(root.right, n1, n2);
 
-        if (lans!=null && rans!=null){
+        if (lans != null && rans != null) {
             return root;
-        }else if (lans!=null && rans==null){
+        } else if (lans != null && rans == null) {
             return lans;
-        }else if (lans==null && rans!=null){
+        } else if (lans == null && rans != null) {
             return rans;
-        }
-        else{
+        } else {
             return null;
         }
     }
@@ -459,7 +498,7 @@ class BinaryTree {
             return true;
         }
 
-        path.remove(path.size()-1);
+        path.remove(path.size() - 1);
         return false;
     }
 
@@ -472,6 +511,87 @@ class BinaryTree {
             return -1;
         }
         return path.get(path.size() - 1 - k);
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left, right;
+
+        TreeNode(int val) {
+            this.val = val;
+            left = right = null;
+        }
+    }
+
+    TreeNode prev = null;
+
+    public void flatten(TreeNode root) {
+        if (root == null)
+            return;
+
+        // Process right subtree first
+        flatten(root.right);
+        // Process left subtree
+        flatten(root.left);
+
+        // Link current node
+        root.right = prev;
+        root.left = null;
+        prev = root;
+    }
+
+    public static void flatten2(Node root) {
+        // code here
+        Node curr = root;
+        while (curr != null) {
+            if (curr.left != null) {
+                // Find rightmost node of left subtree
+                Node prev = curr.left;
+                while (prev.right != null) {
+                    prev = prev.right;
+                }
+                // Connect right subtree after the rightmost node
+                prev.right = curr.right;
+
+                // Move left subtree to right
+                curr.right = curr.left;
+                curr.left = null;
+            }
+            // Move to next node
+            curr = curr.right;
+        }
+    }
+
+    public void printList(TreeNode root) {
+        while (root != null) {
+            System.out.print(root.val + " -> ");
+            root = root.right;
+        }
+        System.out.println("null");
+    }
+
+    Node lca(Node root, int n1, int n2) {
+        // Your code here
+        if (root == null) {
+            return null;
+        }
+
+        if (root.data == n1 || root.data == n2) {
+            return root;
+        }
+
+        Node lans = lca(root.left, n1, n2);
+        Node rans = lca(root.right, n1, n2);
+
+        if (lans != null && rans != null) {
+            return root;
+        } else if (lans != null && rans == null) {
+            return lans;
+        } else if (lans == null && rans != null) {
+            return rans;
+        } else {
+            return null;
+        }
     }
 }
 
@@ -486,8 +606,8 @@ public class q1buildtree {
         }
         BinaryTree bt = new BinaryTree();
 
-        // Node root = bt.buildTree(nodes);
-        // bt.preordertrav(root);
+        Node root = bt.buildTree(nodes);
+        bt.preordertrav(root);
         // bt.postordertrav(root);
         // System.out.println();
         // bt.inordertrav(root);
@@ -555,5 +675,10 @@ public class q1buildtree {
 
         // System.out.println();
         // System.out.println(bt.kthAncestor(root, 2, 4));
+
+        // bt.flatten(root);
+        // bt.printList(root);
+
+        // bt.lca(root);
     }
 }

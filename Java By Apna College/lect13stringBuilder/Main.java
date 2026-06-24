@@ -1,3 +1,4 @@
+
 class Solution {
     public boolean isPalindrome(String s) {
         s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
@@ -14,15 +15,15 @@ class Solution {
         return true;        
     }
 }
+
 public class Main {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("Hello");
-        sb.append(" World");
-        sb.insert(5, ",");
-        sb.replace(6, 11, "Java");
+        StringBuilder sb = new StringBuilder("Hellojinmin");
+        // sb.append(" World");
+        // sb.insert(5, ",");
+        // sb.replace(6, 11, "Java");
         sb.delete(5, 6);
-        sb.reverse();
+        // sb.reverse();
         System.out.println(sb.toString()); // Output: avaJ olleH
-        
     }
 }

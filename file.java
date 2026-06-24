@@ -1,91 +1,63 @@
-import java.util.*;
+import java.util.Arrays;
 
-class file {
+public class file {
 
-    private static boolean isSafe(int x, int y, int n, int[][] visited, int[][] m) {
-        return (x >= 0 && x < n && y >= 0 && y < n && visited[x][y] == 0 && m[x][y] == 1);
+    public static int lss(String str){
+        int n = str.length();
+        Map<Character,Integer> mp =new HashMap<>();
+
+        int st = -1;
+        int mx = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            if (mp.get(str.charAt(i)) > st){
+                mp.put(str.charAt(i),st);
+            }
+            mp.put(str.charAt(i),i);
+            mx = Math.max(mx, i-st+1);
+        }
+        return mx;
     }
 
-    private static void solve(int[][] m, int n, int x, int y, int[][] visited, List<String> ans, String path) {
-        if (x == n - 1 && y == n - 1) {
-            ans.add(path.toString());
-            return;
+    public static boolean isArmstrong(int num) {
+        int original = num;
+        int sum = 0;
+        int digits = String.valueOf(num).length();
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
         }
 
-        visited[x][y] = 1;
-
-        // Down
-        int nx = x + 1, ny = y;
-        if (isSafe(nx, ny, n, visited, m)) {
-            // path.append('D');
-            solve(m, n, nx, ny, visited, ans, path+'D');
-            // path.deleteCharAt(path.length() - 1);
-        }
-
-        // Left
-        nx = x; ny = y - 1;
-        if (isSafe(nx, ny, n, visited, m)) {
-            // path.append('L');
-            solve(m, n, nx, ny, visited, ans, path+'L');
-            // path.deleteCharAt(path.length() - 1);
-        }
-
-        // Right
-        nx = x; ny = y + 1;
-        if (isSafe(nx, ny, n, visited, m)) {
-            // path.append('R');
-            solve(m, n, nx, ny, visited, ans, path+'R');
-            // path.deleteCharAt(path.length() - 1);
-        }
-
-        // Up
-        nx = x - 1; ny = y;
-        if (isSafe(nx, ny, n, visited, m)) {
-            // path.append('U');
-            solve(m, n, nx, ny, visited, ans, path+'U');
-            // path.deleteCharAt(path.length() - 1);
-        }
-
-        visited[x][y] = 0;
-    }
-
-    public static List<String> findPath(int[][] m, int n) {
-        List<String> ans = new ArrayList<>();
-        if (m[0][0] == 0) return ans;
-
-        int[][] visited = new int[n][n];
-        String path = "";
-        solve(m, n, 0, 0, visited, ans, path);
-        return ans;
+        return sum == original;
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+        // int[] arr = {1, 2, 3, 9};
+        // int n = arr.length;
+        // int[] res = new int[n + 1];
 
-        while (t-- > 0) {
-            int n = sc.nextInt();
-            int[][] m = new int[n][n];
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    m[i][j] = sc.nextInt();
-                }
-            }
+        // int num = arr[n - 1] + 1;  // increment last digit
+        // int carry = num / 10;
+        // res[n] = num % 10;
 
-            // Solution obj = new Solution();
-            List<String> result = findPath(m, n);
-            Collections.sort(result);
+        // for (int i = n - 2; i >= 0; i--) {
+        //     num = arr[i] + carry;       // add carry to current digit
+        //     carry = num / 10;
+        //     res[i + 1] = num % 10;      // store result in correct position
+        // }
 
-            if (result.size() == 0) {
-                System.out.print("-1");
-            } else {
-                for (String s : result) {
-                    System.out.print(s + " ");
-                }
-            }
-            System.out.println();
-        }
+        // res[0] = carry;  // final carry (if any)
 
-        sc.close();
+        // // If no carry, skip the leading 0
+        // if (res[0] == 0) {
+        //     res = Arrays.copyOfRange(res, 1, res.length);
+        // }
+
+        // System.out.println(Arrays.toString(res));
+
+        // isArmstring(153);
+        System.out.println(isArmstrong(153));
+        
     }
 }

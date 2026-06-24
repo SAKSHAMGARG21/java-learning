@@ -51,13 +51,20 @@ public class Learn2Comparable {
 
         List<Student> nums = new ArrayList<>();
         nums.add(new Student("Rohit", 15));
-        nums.add(new Student("Loki", 21));
-        nums.add(new Student("Sam", 36));
+        nums.add(new Student("Loki", 36));
+        nums.add(new Student("Aam", 36));
         nums.add(new Student("Tony", 63));
         nums.add(new Student("Thor", 54));
 
         // sort in ascending order
-        Collections.sort(nums, (i, j) -> i.age - j.age); // lambda in sort function
+        // Collections.sort(nums, (i, j) -> i.age - j.age); // lambda in sort function
+
+        // advanced lambda function
+        Collections.sort(nums, (i, j) -> {
+            if (i.age == j.age)
+                return i.name.compareTo(j.name);
+            return i.age - j.age; 
+        });
 
         for (Student s : nums) {
             System.out.println(s);

@@ -21,8 +21,9 @@ class Pen {
 
     public void printtype() {
         System.out.println(this.type);
-    }
+    } 
 }
+
 // ******************************** next part *******************************
 
 class Student {
